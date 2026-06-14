@@ -1,0 +1,86 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/bscscan/main/json-schema/token-transfer.json",
+  "title": "BscScan BEP-20 Token Transfer Event",
+  "description": "Schema for a BEP-20 token transfer event as returned by the BscScan API.",
+  "type": "object",
+  "properties": {
+    "blockNumber": {
+      "type": "string",
+      "description": "Block number in which the transfer occurred."
+    },
+    "timeStamp": {
+      "type": "string",
+      "description": "Unix timestamp of the block."
+    },
+    "hash": {
+      "type": "string",
+      "description": "Transaction hash.",
+      "pattern": "0x[A-Fa-f0-9]{64}"
+    },
+    "nonce": {
+      "type": "string",
+      "description": "Transaction nonce."
+    },
+    "blockHash": {
+      "type": "string",
+      "description": "Hash of the block."
+    },
+    "from": {
+      "type": "string",
+      "description": "Sender address.",
+      "pattern": "0x[A-Fa-f0-9]{40}"
+    },
+    "contractAddress": {
+      "type": "string",
+      "description": "Token contract address.",
+      "pattern": "0x[A-Fa-f0-9]{40}"
+    },
+    "to": {
+      "type": "string",
+      "description": "Recipient address.",
+      "pattern": "0x[A-Fa-f0-9]{40}"
+    },
+    "value": {
+      "type": "string",
+      "description": "Token transfer amount in the token's smallest unit."
+    },
+    "tokenName": {
+      "type": "string",
+      "description": "Name of the BEP-20 token."
+    },
+    "tokenSymbol": {
+      "type": "string",
+      "description": "Symbol of the BEP-20 token."
+    },
+    "tokenDecimal": {
+      "type": "string",
+      "description": "Number of decimal places for the token."
+    },
+    "transactionIndex": {
+      "type": "string",
+      "description": "Index of the transaction within the block."
+    },
+    "gas": {
+      "type": "string",
+      "description": "Gas provided by the sender."
+    },
+    "gasPrice": {
+      "type": "string",
+      "description": "Gas price in wei."
+    },
+    "gasUsed": {
+      "type": "string",
+      "description": "Gas used by this specific transaction."
+    },
+    "cumulativeGasUsed": {
+      "type": "string",
+      "description": "Cumulative gas used in the block up to this transaction."
+    },
+    "confirmations": {
+      "type": "string",
+      "description": "Number of block confirmations."
+    }
+  },
+  "required": ["blockNumber", "timeStamp", "hash", "from", "contractAddress", "to", "value", "tokenName", "tokenSymbol", "tokenDecimal"]
+}

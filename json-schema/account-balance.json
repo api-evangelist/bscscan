@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/bscscan/main/json-schema/account-balance.json",
+  "title": "BscScan Account Balance Response",
+  "description": "Response schema for the BscScan API Get BNB Balance for a Single Address endpoint.",
+  "type": "object",
+  "properties": {
+    "status": {
+      "type": "string",
+      "description": "Response status code. '1' indicates success, '0' indicates an error.",
+      "enum": ["0", "1"]
+    },
+    "message": {
+      "type": "string",
+      "description": "Response message. 'OK' for success, 'NOTOK' for error."
+    },
+    "result": {
+      "type": "string",
+      "description": "Account balance in wei (smallest BNB denomination).",
+      "pattern": "[0-9]+"
+    }
+  },
+  "required": ["status", "message", "result"]
+}

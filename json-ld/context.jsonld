@@ -1,0 +1,153 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "bscscan": "https://bscscan.com/terms#",
+    "schema": "https://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+
+    "BscScanTransaction": {
+      "@id": "bscscan:Transaction",
+      "@type": "@id"
+    },
+    "BscScanTokenTransfer": {
+      "@id": "bscscan:TokenTransfer",
+      "@type": "@id"
+    },
+    "BscScanBlock": {
+      "@id": "bscscan:Block",
+      "@type": "@id"
+    },
+    "BscScanContract": {
+      "@id": "bscscan:Contract",
+      "@type": "@id"
+    },
+
+    "blockNumber": {
+      "@id": "bscscan:blockNumber",
+      "@type": "xsd:string"
+    },
+    "timeStamp": {
+      "@id": "schema:dateCreated",
+      "@type": "xsd:string"
+    },
+    "hash": {
+      "@id": "bscscan:transactionHash",
+      "@type": "xsd:string"
+    },
+    "blockHash": {
+      "@id": "bscscan:blockHash",
+      "@type": "xsd:string"
+    },
+    "from": {
+      "@id": "schema:sender",
+      "@type": "xsd:string"
+    },
+    "to": {
+      "@id": "schema:recipient",
+      "@type": "xsd:string"
+    },
+    "value": {
+      "@id": "schema:amount",
+      "@type": "xsd:string"
+    },
+    "gas": {
+      "@id": "bscscan:gas",
+      "@type": "xsd:string"
+    },
+    "gasPrice": {
+      "@id": "bscscan:gasPrice",
+      "@type": "xsd:string"
+    },
+    "gasUsed": {
+      "@id": "bscscan:gasUsed",
+      "@type": "xsd:string"
+    },
+    "nonce": {
+      "@id": "bscscan:nonce",
+      "@type": "xsd:string"
+    },
+    "input": {
+      "@id": "bscscan:inputData",
+      "@type": "xsd:string"
+    },
+    "contractAddress": {
+      "@id": "bscscan:contractAddress",
+      "@type": "xsd:string"
+    },
+    "isError": {
+      "@id": "bscscan:isError",
+      "@type": "xsd:string"
+    },
+    "txreceipt_status": {
+      "@id": "bscscan:receiptStatus",
+      "@type": "xsd:string"
+    },
+    "confirmations": {
+      "@id": "bscscan:confirmations",
+      "@type": "xsd:string"
+    },
+    "transactionIndex": {
+      "@id": "bscscan:transactionIndex",
+      "@type": "xsd:string"
+    },
+    "cumulativeGasUsed": {
+      "@id": "bscscan:cumulativeGasUsed",
+      "@type": "xsd:string"
+    },
+    "methodId": {
+      "@id": "bscscan:methodId",
+      "@type": "xsd:string"
+    },
+    "functionName": {
+      "@id": "bscscan:functionName",
+      "@type": "xsd:string"
+    },
+    "tokenName": {
+      "@id": "schema:name",
+      "@type": "xsd:string"
+    },
+    "tokenSymbol": {
+      "@id": "schema:tickerSymbol",
+      "@type": "xsd:string"
+    },
+    "tokenDecimal": {
+      "@id": "bscscan:tokenDecimal",
+      "@type": "xsd:string"
+    },
+    "status": {
+      "@id": "bscscan:responseStatus",
+      "@type": "xsd:string"
+    },
+    "message": {
+      "@id": "schema:description",
+      "@type": "xsd:string"
+    },
+    "result": {
+      "@id": "bscscan:result"
+    },
+    "SafeGasPrice": {
+      "@id": "bscscan:safeGasPrice",
+      "@type": "xsd:string"
+    },
+    "ProposeGasPrice": {
+      "@id": "bscscan:proposeGasPrice",
+      "@type": "xsd:string"
+    },
+    "FastGasPrice": {
+      "@id": "bscscan:fastGasPrice",
+      "@type": "xsd:string"
+    },
+    "LastBlock": {
+      "@id": "bscscan:lastBlock",
+      "@type": "xsd:string"
+    },
+    "suggestBaseFee": {
+      "@id": "bscscan:suggestBaseFee",
+      "@type": "xsd:string"
+    },
+    "gasUsedRatio": {
+      "@id": "bscscan:gasUsedRatio",
+      "@type": "xsd:string"
+    }
+  }
+}

@@ -1,0 +1,111 @@
+name: BscScan API Vocabulary
+description: Key terms and concepts used in the BscScan API for BNB Smart Chain data.
+url: https://docs.bscscan.com/
+terms:
+  - term: address
+    description: A 20-byte hexadecimal string prefixed with 0x representing a wallet or smart contract on BNB Smart Chain. Example: 0x1234567890abcdef1234567890abcdef12345678
+    type: string
+
+  - term: wei
+    description: The smallest denomination of BNB. 1 BNB = 1,000,000,000,000,000,000 wei (10^18 wei). All balance and value fields are returned in wei.
+    type: unit
+
+  - term: chainid
+    description: Numeric identifier for a blockchain network in the Etherscan V2 multichain API. BNB Smart Chain mainnet uses chainid=56.
+    type: integer
+
+  - term: txHash
+    description: A 32-byte hexadecimal transaction identifier prefixed with 0x, uniquely identifying a transaction on the blockchain.
+    type: string
+
+  - term: blockNumber
+    description: The sequential index of a block on BNB Smart Chain. Used to filter queries by block range.
+    type: integer
+
+  - term: gasPrice
+    description: The amount of wei per unit of gas the sender is willing to pay. Determines transaction processing priority.
+    type: string
+
+  - term: gasUsed
+    description: The actual amount of gas consumed by a transaction during execution.
+    type: string
+
+  - term: module
+    description: API module grouping related endpoints. BscScan modules include account, contract, transaction, block, logs, proxy, token, gastracker, and stats.
+    type: string
+
+  - term: action
+    description: Specific API action within a module. Combined with module to form the API request (e.g., module=account&action=balance).
+    type: string
+
+  - term: apikey
+    description: Authentication token required for BscScan API access. Obtain from bscscan.com/myapikey.
+    type: string
+
+  - term: BEP-20
+    description: BNB Smart Chain token standard equivalent to Ethereum's ERC-20. Defines a fungible token interface on BSC.
+    type: standard
+
+  - term: BEP-721
+    description: BNB Smart Chain non-fungible token (NFT) standard equivalent to Ethereum's ERC-721.
+    type: standard
+
+  - term: BEP-1155
+    description: BNB Smart Chain multi-token standard equivalent to Ethereum's ERC-1155, supporting both fungible and non-fungible tokens.
+    type: standard
+
+  - term: contractAddress
+    description: The address of a deployed smart contract on BNB Smart Chain.
+    type: string
+
+  - term: ABI
+    description: Application Binary Interface — a JSON description of a smart contract's functions and events, required to interact with the contract programmatically.
+    type: object
+
+  - term: tag
+    description: Block reference tag used in balance queries. Accepted values are 'latest', 'earliest', or 'pending'.
+    type: string
+
+  - term: startblock
+    description: Starting block number for filtering transaction or event queries. Use 0 for genesis block.
+    type: integer
+
+  - term: endblock
+    description: Ending block number for filtering transaction or event queries. Use 99999999 for the latest block.
+    type: integer
+
+  - term: page
+    description: Page number for paginated API results. Starts at 1.
+    type: integer
+
+  - term: offset
+    description: Number of results per page for paginated API results. Maximum 10000.
+    type: integer
+
+  - term: sort
+    description: Sort order for results. 'asc' for ascending (oldest first), 'desc' for descending (newest first).
+    type: string
+
+  - term: status
+    description: API response status. '1' indicates a successful request, '0' indicates an error.
+    type: string
+
+  - term: SafeGasPrice
+    description: Recommended gas price in Gwei for a transaction likely to be confirmed within a few minutes.
+    type: string
+
+  - term: ProposeGasPrice
+    description: Recommended gas price in Gwei for standard transaction confirmation speed.
+    type: string
+
+  - term: FastGasPrice
+    description: Recommended gas price in Gwei for fast (next block) transaction confirmation.
+    type: string
+
+  - term: topic
+    description: A 32-byte hash of an event signature used to filter smart contract event logs.
+    type: string
+
+  - term: GUID
+    description: Globally Unique Identifier returned by contract verification submissions, used to check verification status.
+    type: string

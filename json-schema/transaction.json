@@ -1,0 +1,95 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/bscscan/main/json-schema/transaction.json",
+  "title": "BscScan Transaction",
+  "description": "Schema for a single BNB Smart Chain transaction as returned by the BscScan API.",
+  "type": "object",
+  "properties": {
+    "blockNumber": {
+      "type": "string",
+      "description": "Block number in which the transaction was mined."
+    },
+    "timeStamp": {
+      "type": "string",
+      "description": "Unix timestamp of the block."
+    },
+    "hash": {
+      "type": "string",
+      "description": "Transaction hash.",
+      "pattern": "0x[A-Fa-f0-9]{64}"
+    },
+    "nonce": {
+      "type": "string",
+      "description": "Transaction nonce."
+    },
+    "blockHash": {
+      "type": "string",
+      "description": "Hash of the block containing the transaction."
+    },
+    "transactionIndex": {
+      "type": "string",
+      "description": "Index of the transaction within the block."
+    },
+    "from": {
+      "type": "string",
+      "description": "Sender address.",
+      "pattern": "0x[A-Fa-f0-9]{40}"
+    },
+    "to": {
+      "type": "string",
+      "description": "Recipient address.",
+      "pattern": "0x[A-Fa-f0-9]{40}"
+    },
+    "value": {
+      "type": "string",
+      "description": "Transaction value in wei."
+    },
+    "gas": {
+      "type": "string",
+      "description": "Gas provided by the sender."
+    },
+    "gasPrice": {
+      "type": "string",
+      "description": "Gas price in wei."
+    },
+    "isError": {
+      "type": "string",
+      "description": "Whether the transaction failed. '0' = no error, '1' = error.",
+      "enum": ["0", "1"]
+    },
+    "txreceipt_status": {
+      "type": "string",
+      "description": "Transaction receipt status. '1' = success, '0' = failure.",
+      "enum": ["0", "1", ""]
+    },
+    "input": {
+      "type": "string",
+      "description": "Input data for the transaction."
+    },
+    "contractAddress": {
+      "type": "string",
+      "description": "Contract address if the transaction created a contract, otherwise empty."
+    },
+    "cumulativeGasUsed": {
+      "type": "string",
+      "description": "Cumulative gas used in the block up to this transaction."
+    },
+    "gasUsed": {
+      "type": "string",
+      "description": "Gas used by this specific transaction."
+    },
+    "confirmations": {
+      "type": "string",
+      "description": "Number of block confirmations."
+    },
+    "methodId": {
+      "type": "string",
+      "description": "First 4 bytes of the input data, representing the function selector."
+    },
+    "functionName": {
+      "type": "string",
+      "description": "Human-readable function name if the contract ABI is available."
+    }
+  },
+  "required": ["blockNumber", "timeStamp", "hash", "from", "to", "value", "gas", "gasPrice"]
+}
