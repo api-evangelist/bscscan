@@ -1,0 +1,55 @@
+name: BscScan API Rate Limits
+description: BscScan API rate limits are enforced per API key and vary by subscription plan. Limits apply to calls per second and total daily calls. Free API keys support up to 5 calls per second. Pro plans unlock higher throughput up to 30 calls per second with up to 1.5 million daily calls.
+url: https://info.bscscan.com/apis/
+rateLimits:
+  - plan: Free
+    callsPerSecond: 5
+    dailyCalls: 100000
+    apiKeys: 3
+    notes:
+      - Data values update programmatically up to 30 calls per second at the platform level
+      - Free keys restricted to selected chains
+  - plan: Lite
+    callsPerSecond: 5
+    dailyCalls: 100000
+    apiKeys: 3
+    notes:
+      - All 60+ EVM chains accessible including BSC (chainid=56)
+  - plan: Standard
+    callsPerSecond: 10
+    dailyCalls: 200000
+    notes:
+      - Includes Pro endpoint access
+  - plan: Advanced
+    callsPerSecond: 20
+    dailyCalls: 500000
+    notes:
+      - Includes Pro endpoint access
+  - plan: Professional
+    callsPerSecond: 30
+    dailyCalls: 1000000
+    notes:
+      - Includes Pro endpoint access
+  - plan: Pro Plus
+    callsPerSecond: 30
+    dailyCalls: 1500000
+    notes:
+      - Includes Address Metadata endpoint
+  - plan: Enterprise
+    callsPerSecond: unmetered
+    dailyCalls: unmetered
+    notes:
+      - Dedicated infrastructure
+      - SLA-backed
+enforcement:
+  - Requests exceeding the rate limit will receive an error response
+  - Implement exponential backoff for retry logic on rate limit errors
+  - Each API key is subject to its own rate limit independently
+authentication:
+  method: apikey
+  parameterName: apikey
+  location: query
+  notes:
+    - API keys are created at bscscan.com/myapikey
+    - Maximum 3 API keys per account on free plans
+    - API key must be included in every request

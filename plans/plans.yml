@@ -1,0 +1,107 @@
+name: BscScan API Plans
+description: BscScan API plans are managed through the Etherscan V2 unified platform, providing access to BNB Smart Chain (chainid=56) alongside 60+ EVM chains under a single API key. Plans scale from a free tier with basic rate limits up to enterprise with dedicated infrastructure.
+provider: BscScan (via Etherscan V2)
+url: https://etherscan.io/apis?id=56
+plans:
+  - name: Free
+    description: Free tier providing basic API access to BNB Smart Chain data with attribution requirement. Limited to selected chains.
+    price: 0.00
+    currency: USD
+    billingCycle: monthly
+    rateLimit: 5
+    rateLimitUnit: calls/second
+    dailyCallLimit: 100000
+    features:
+      - BNB balance queries
+      - Transaction history
+      - BEP-20 token transfers
+      - Smart contract ABI retrieval
+      - Gas price queries
+      - Block data
+      - Attribution required ("Powered by BscScan.com APIs")
+      - Maximum 3 API keys per account
+    constraints:
+      - Selected chains only
+      - Attribution to BscScan required for public-facing applications
+  - name: Lite
+    description: Entry-level paid plan providing access to all 60+ supported EVM chains including BSC, with higher call limits.
+    price: 49.00
+    currency: USD
+    billingCycle: monthly
+    rateLimit: 5
+    rateLimitUnit: calls/second
+    dailyCallLimit: 100000
+    features:
+      - All 60+ supported EVM chains via chainid parameter
+      - BNB Smart Chain (chainid=56)
+      - All free tier endpoints
+      - No attribution requirement
+  - name: Standard
+    description: Standard paid plan with increased rate limits and access to Pro endpoints.
+    price: 199.00
+    currency: USD
+    billingCycle: monthly
+    rateLimit: 10
+    rateLimitUnit: calls/second
+    dailyCallLimit: 200000
+    features:
+      - All Lite plan features
+      - Pro endpoints access
+      - BEP-20 Token Holdings endpoint
+      - Historical token balance data
+  - name: Advanced
+    description: Advanced paid plan with higher throughput and Pro endpoint access.
+    price: 299.00
+    currency: USD
+    billingCycle: monthly
+    rateLimit: 20
+    rateLimitUnit: calls/second
+    dailyCallLimit: 500000
+    features:
+      - All Standard plan features
+      - Higher daily call limits
+      - Pro endpoints access
+  - name: Professional
+    description: Professional plan for high-volume applications requiring sustained throughput.
+    price: 399.00
+    currency: USD
+    billingCycle: monthly
+    rateLimit: 30
+    rateLimitUnit: calls/second
+    dailyCallLimit: 1000000
+    features:
+      - All Advanced plan features
+      - 1 million daily calls
+      - Pro endpoints access
+  - name: Pro Plus
+    description: Pro Plus plan with Address Metadata endpoint access for enriched address intelligence.
+    price: 899.00
+    currency: USD
+    billingCycle: monthly
+    rateLimit: 30
+    rateLimitUnit: calls/second
+    dailyCallLimit: 1500000
+    features:
+      - All Professional plan features
+      - Address Metadata endpoint
+      - 1.5 million daily calls
+  - name: Enterprise
+    description: Enterprise plan with dedicated infrastructure, custom rate limits, unmetered daily calls, and SLA-backed uptime.
+    price: custom
+    currency: USD
+    billingCycle: monthly
+    rateLimit: unmetered
+    rateLimitUnit: calls/second
+    dailyCallLimit: unmetered
+    features:
+      - Dedicated infrastructure
+      - Custom rate limits
+      - Unmetered daily calls
+      - SLA-backed uptime
+      - Priority support
+notes:
+  - API subscriptions on BscScan are migrated to Etherscan API V2
+  - Payment processed via Stripe (major credit cards accepted)
+  - Payments are non-refundable
+  - API Pro accounts activate within 24 hours after payment
+  - Auto-renewal enabled by default; cancel before billing date to stop renewal

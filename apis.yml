@@ -1,0 +1,55 @@
+name: BscScan
+description: BscScan is the leading block explorer and analytics platform for BNB Smart Chain (BSC), providing a REST API for querying transactions, token transfers, smart contract ABIs, gas prices, BEP-20 token information, and on-chain statistics. API subscriptions are now unified under the Etherscan V2 platform, enabling access to 60+ EVM chains via a single API key using the chainid parameter (BSC chainid=56).
+image: https://bscscan.com/images/svg/brands/bscscan-logo-circle.svg
+tags:
+  - blockchain
+  - block-explorer
+  - BNB Smart Chain
+  - BSC
+  - BEP-20
+  - transactions
+  - smart-contracts
+  - DeFi
+  - EVM
+created: "2026-06-13"
+modified: "2026-06-13"
+url: https://raw.githubusercontent.com/api-evangelist/bscscan/refs/heads/main/apis.yml
+specificationVersion: "0.19"
+apis:
+  - name: BscScan API
+    description: REST API for querying BNB Smart Chain data including account balances, transactions, internal transactions, BEP-20 and BEP-721 token transfer events, smart contract ABIs and source code, event logs, gas prices, block data, and network statistics. Accessed via Etherscan V2 with chainid=56.
+    humanURL: https://bscscan.com
+    baseURL: https://api.bscscan.com/v2/api
+    tags:
+      - blockchain
+      - BNB Smart Chain
+      - BSC
+      - transactions
+      - tokens
+      - smart-contracts
+    properties:
+      - type: documentation
+        url: https://info.bscscan.com/apis/
+      - type: openapi
+        url: https://raw.githubusercontent.com/api-evangelist/bscscan/refs/heads/main/openapi.yml
+      - type: plans
+        url: https://raw.githubusercontent.com/api-evangelist/bscscan/refs/heads/main/plans/plans.yml
+      - type: rate-limits
+        url: https://raw.githubusercontent.com/api-evangelist/bscscan/refs/heads/main/rate-limits/rate-limits.yml
+      - type: finops
+        url: https://raw.githubusercontent.com/api-evangelist/bscscan/refs/heads/main/finops/finops.yml
+      - type: signup
+        url: https://bscscan.com/register
+      - type: authentication
+        url: https://info.bscscan.com/myapikey/
+      - type: terms-of-service
+        url: https://bscscan.com/terms
+      - type: privacy-policy
+        url: https://bscscan.com/privacyPolicy
+    contact:
+      - FN: BscScan Support
+        url: https://bscscan.com/contactus
+maintainers:
+  - FN: API Evangelist
+    url: https://apievangelist.com
+    email: kin@apievangelist.com

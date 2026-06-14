@@ -1,0 +1,35 @@
+name: BscScan API FinOps
+description: Financial operations guidance for managing BscScan API costs. Plans are billed monthly through the Etherscan V2 platform. Free tier covers basic use cases; paid plans unlock higher throughput and Pro endpoints. Cost management requires tracking daily call consumption and right-sizing plans to actual usage patterns.
+url: https://etherscan.io/apis?id=56
+billing:
+  processor: Stripe
+  methods:
+    - Major credit cards (Visa, Mastercard, Amex)
+  cycle: monthly
+  autoRenewal: true
+  refundPolicy: non-refundable
+  activationTime: within 24 hours of payment
+costOptimization:
+  - Monitor daily call consumption via the API dashboard
+  - Use batch endpoints (e.g., get_bnb_balance_multiple for up to 20 addresses) to reduce total calls
+  - Cache frequently requested data locally, especially static contract ABIs and source code
+  - Start on Free plan to validate use case before upgrading
+  - Set up alerting when approaching daily call limits to avoid service interruption
+  - Cancel auto-renewal before billing date if downgrading to avoid overpayment
+  - Use paginated endpoints to control data volume per request
+budgetGuidance:
+  - Free: $0/month — suitable for development, testing, and low-volume personal projects
+  - Lite: $49/month — suitable for small production applications needing multi-chain access
+  - Standard: $199/month — suitable for applications requiring Pro endpoints and higher throughput
+  - Advanced: $299/month — suitable for mid-size DeFi and analytics platforms
+  - Professional: $399/month — suitable for high-traffic applications with sustained API demand
+  - Pro Plus: $899/month — suitable for applications requiring enriched address metadata
+  - Enterprise: custom — suitable for institutional or exchange-level data consumers
+attribution:
+  required: true
+  plans:
+    - Free
+  text: "Powered by BscScan.com APIs"
+  notes:
+    - Attribution not required for personal or private use
+    - Paid plans (Lite and above) do not require attribution
