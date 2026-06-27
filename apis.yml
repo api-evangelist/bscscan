@@ -28,23 +28,23 @@ apis:
       - tokens
       - smart-contracts
     properties:
-      - type: documentation
+      - type: Documentation
         url: https://info.bscscan.com/apis/
-      - type: openapi
+      - type: OpenAPI
         url: https://raw.githubusercontent.com/api-evangelist/bscscan/refs/heads/main/openapi.yml
-      - type: plans
+      - type: Plans
         url: https://raw.githubusercontent.com/api-evangelist/bscscan/refs/heads/main/plans/plans.yml
-      - type: rate-limits
+      - type: RateLimits
         url: https://raw.githubusercontent.com/api-evangelist/bscscan/refs/heads/main/rate-limits/rate-limits.yml
-      - type: finops
+      - type: FinOps
         url: https://raw.githubusercontent.com/api-evangelist/bscscan/refs/heads/main/finops/finops.yml
-      - type: signup
+      - type: Signup
         url: https://bscscan.com/register
-      - type: authentication
+      - type: Authentication
         url: https://info.bscscan.com/myapikey/
-      - type: terms-of-service
+      - type: TermsOfService
         url: https://bscscan.com/terms
-      - type: privacy-policy
+      - type: PrivacyPolicy
         url: https://bscscan.com/privacyPolicy
     contact:
       - FN: BscScan Support
