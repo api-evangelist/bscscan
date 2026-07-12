@@ -53,3 +53,10 @@ maintainers:
   - FN: API Evangelist
     url: https://apievangelist.com
     email: kin@apievangelist.com
+common:
+- type: VulnerabilityDisclosure
+  url: security/bscscan-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/bscscan-domain-security.yml
+- type: Authentication
+  url: authentication/bscscan-authentication.yml
