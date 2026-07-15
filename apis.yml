@@ -54,6 +54,8 @@ maintainers:
     url: https://apievangelist.com
     email: kin@apievangelist.com
 common:
+- type: AgenticAccess
+  url: agentic-access/bscscan-agentic-access.yml
 - type: VulnerabilityDisclosure
   url: security/bscscan-vulnerability-disclosure.yml
 - type: DomainSecurity
