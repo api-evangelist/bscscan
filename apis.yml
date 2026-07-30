@@ -1,5 +1,18 @@
 name: BscScan
 description: BscScan is the leading block explorer and analytics platform for BNB Smart Chain (BSC), providing a REST API for querying transactions, token transfers, smart contract ABIs, gas prices, BEP-20 token information, and on-chain statistics. API subscriptions are now unified under the Etherscan V2 platform, enabling access to 60+ EVM chains via a single API key using the chainid parameter (BSC chainid=56).
+accessModel:
+  pricing: freemium
+  onboarding: self-serve
+  trial: false
+  try_now: true
+  public: false
+  label: Freemium · Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
 image: https://bscscan.com/images/svg/brands/bscscan-logo-circle.svg
 tags:
   - blockchain
@@ -16,39 +29,286 @@ modified: "2026-06-13"
 url: https://raw.githubusercontent.com/api-evangelist/bscscan/refs/heads/main/apis.yml
 specificationVersion: "0.19"
 apis:
-  - name: BscScan API
-    description: REST API for querying BNB Smart Chain data including account balances, transactions, internal transactions, BEP-20 and BEP-721 token transfer events, smart contract ABIs and source code, event logs, gas prices, block data, and network statistics. Accessed via Etherscan V2 with chainid=56.
-    humanURL: https://bscscan.com
-    baseURL: https://api.bscscan.com/v2/api
-    tags:
-      - blockchain
-      - BNB Smart Chain
-      - BSC
-      - transactions
-      - tokens
-      - smart-contracts
-    properties:
-      - type: Documentation
-        url: https://info.bscscan.com/apis/
-      - type: OpenAPI
-        url: https://raw.githubusercontent.com/api-evangelist/bscscan/refs/heads/main/openapi.yml
-      - type: Plans
-        url: https://raw.githubusercontent.com/api-evangelist/bscscan/refs/heads/main/plans/plans.yml
-      - type: RateLimits
-        url: https://raw.githubusercontent.com/api-evangelist/bscscan/refs/heads/main/rate-limits/rate-limits.yml
-      - type: FinOps
-        url: https://raw.githubusercontent.com/api-evangelist/bscscan/refs/heads/main/finops/finops.yml
-      - type: Signup
-        url: https://bscscan.com/register
-      - type: Authentication
-        url: https://info.bscscan.com/myapikey/
-      - type: TermsOfService
-        url: https://bscscan.com/terms
-      - type: PrivacyPolicy
-        url: https://bscscan.com/privacyPolicy
-    contact:
-      - FN: BscScan Support
-        url: https://bscscan.com/contactus
+- aid: bscscan:bscscan-accounts-api
+  name: BscScan Accounts API
+  description: The Accounts API from BscScan — 12 operation(s) for accounts.
+  humanURL: https://bscscan.com
+  baseURL: https://api.bscscan.com/v2/api
+  tags:
+  - Accounts
+  properties:
+  - type: OpenAPI
+    url: openapi/bscscan-accounts-api-openapi.yml
+  - type: Documentation
+    url: https://info.bscscan.com/apis/
+  - type: Plans
+    url: https://raw.githubusercontent.com/api-evangelist/bscscan/refs/heads/main/plans/plans.yml
+  - type: RateLimits
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/bscscan/refs/heads/main/rate-limits/rate-limits.yml
+  - type: FinOps
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/bscscan/refs/heads/main/finops/finops.yml
+  - type: Signup
+    url: https://bscscan.com/register
+  - type: Authentication
+    url: https://info.bscscan.com/myapikey/
+  - type: TermsOfService
+    url: https://bscscan.com/terms
+  - type: PrivacyPolicy
+    url: https://bscscan.com/privacyPolicy
+- aid: bscscan:bscscan-api-pro-endpoints-api
+  name: BscScan API PRO Endpoints API
+  description: The API PRO Endpoints API from BscScan — 20 operation(s) for api pro endpoints.
+  humanURL: https://bscscan.com
+  baseURL: https://api.bscscan.com/v2/api
+  tags:
+  - API PRO Endpoints
+  properties:
+  - type: OpenAPI
+    url: openapi/bscscan-api-pro-endpoints-api-openapi.yml
+  - type: Documentation
+    url: https://info.bscscan.com/apis/
+  - type: Plans
+    url: https://raw.githubusercontent.com/api-evangelist/bscscan/refs/heads/main/plans/plans.yml
+  - type: RateLimits
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/bscscan/refs/heads/main/rate-limits/rate-limits.yml
+  - type: FinOps
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/bscscan/refs/heads/main/finops/finops.yml
+  - type: Signup
+    url: https://bscscan.com/register
+  - type: Authentication
+    url: https://info.bscscan.com/myapikey/
+  - type: TermsOfService
+    url: https://bscscan.com/terms
+  - type: PrivacyPolicy
+    url: https://bscscan.com/privacyPolicy
+- aid: bscscan:bscscan-blocks-api
+  name: BscScan Blocks API
+  description: The Blocks API from BscScan — 8 operation(s) for blocks.
+  humanURL: https://bscscan.com
+  baseURL: https://api.bscscan.com/v2/api
+  tags:
+  - Blocks
+  properties:
+  - type: OpenAPI
+    url: openapi/bscscan-blocks-api-openapi.yml
+  - type: Documentation
+    url: https://info.bscscan.com/apis/
+  - type: Plans
+    url: https://raw.githubusercontent.com/api-evangelist/bscscan/refs/heads/main/plans/plans.yml
+  - type: RateLimits
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/bscscan/refs/heads/main/rate-limits/rate-limits.yml
+  - type: FinOps
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/bscscan/refs/heads/main/finops/finops.yml
+  - type: Signup
+    url: https://bscscan.com/register
+  - type: Authentication
+    url: https://info.bscscan.com/myapikey/
+  - type: TermsOfService
+    url: https://bscscan.com/terms
+  - type: PrivacyPolicy
+    url: https://bscscan.com/privacyPolicy
+- aid: bscscan:bscscan-contracts-api
+  name: BscScan Contracts API
+  description: The Contracts API from BscScan — 5 operation(s) for contracts.
+  humanURL: https://bscscan.com
+  baseURL: https://api.bscscan.com/v2/api
+  tags:
+  - Contracts
+  properties:
+  - type: OpenAPI
+    url: openapi/bscscan-contracts-api-openapi.yml
+  - type: Documentation
+    url: https://info.bscscan.com/apis/
+  - type: Plans
+    url: https://raw.githubusercontent.com/api-evangelist/bscscan/refs/heads/main/plans/plans.yml
+  - type: RateLimits
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/bscscan/refs/heads/main/rate-limits/rate-limits.yml
+  - type: FinOps
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/bscscan/refs/heads/main/finops/finops.yml
+  - type: Signup
+    url: https://bscscan.com/register
+  - type: Authentication
+    url: https://info.bscscan.com/myapikey/
+  - type: TermsOfService
+    url: https://bscscan.com/terms
+  - type: PrivacyPolicy
+    url: https://bscscan.com/privacyPolicy
+- aid: bscscan:bscscan-gas-tracker-api
+  name: BscScan Gas Tracker API
+  description: The Gas Tracker API from BscScan — 5 operation(s) for gas tracker.
+  humanURL: https://bscscan.com
+  baseURL: https://api.bscscan.com/v2/api
+  tags:
+  - Gas Tracker
+  properties:
+  - type: OpenAPI
+    url: openapi/bscscan-gas-tracker-api-openapi.yml
+  - type: Documentation
+    url: https://info.bscscan.com/apis/
+  - type: Plans
+    url: https://raw.githubusercontent.com/api-evangelist/bscscan/refs/heads/main/plans/plans.yml
+  - type: RateLimits
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/bscscan/refs/heads/main/rate-limits/rate-limits.yml
+  - type: FinOps
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/bscscan/refs/heads/main/finops/finops.yml
+  - type: Signup
+    url: https://bscscan.com/register
+  - type: Authentication
+    url: https://info.bscscan.com/myapikey/
+  - type: TermsOfService
+    url: https://bscscan.com/terms
+  - type: PrivacyPolicy
+    url: https://bscscan.com/privacyPolicy
+- aid: bscscan:bscscan-geth-parity-proxy-api
+  name: BscScan Geth/Parity Proxy API
+  description: The Geth/Parity Proxy API from BscScan — 14 operation(s) for geth/parity proxy.
+  humanURL: https://bscscan.com
+  baseURL: https://api.bscscan.com/v2/api
+  tags:
+  - Geth/Parity Proxy
+  properties:
+  - type: OpenAPI
+    url: openapi/bscscan-geth-parity-proxy-api-openapi.yml
+  - type: Documentation
+    url: https://info.bscscan.com/apis/
+  - type: Plans
+    url: https://raw.githubusercontent.com/api-evangelist/bscscan/refs/heads/main/plans/plans.yml
+  - type: RateLimits
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/bscscan/refs/heads/main/rate-limits/rate-limits.yml
+  - type: FinOps
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/bscscan/refs/heads/main/finops/finops.yml
+  - type: Signup
+    url: https://bscscan.com/register
+  - type: Authentication
+    url: https://info.bscscan.com/myapikey/
+  - type: TermsOfService
+    url: https://bscscan.com/terms
+  - type: PrivacyPolicy
+    url: https://bscscan.com/privacyPolicy
+- aid: bscscan:bscscan-logs-api
+  name: BscScan Logs API
+  description: The Logs API from BscScan — 3 operation(s) for logs.
+  humanURL: https://bscscan.com
+  baseURL: https://api.bscscan.com/v2/api
+  tags:
+  - Logs
+  properties:
+  - type: OpenAPI
+    url: openapi/bscscan-logs-api-openapi.yml
+  - type: Documentation
+    url: https://info.bscscan.com/apis/
+  - type: Plans
+    url: https://raw.githubusercontent.com/api-evangelist/bscscan/refs/heads/main/plans/plans.yml
+  - type: RateLimits
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/bscscan/refs/heads/main/rate-limits/rate-limits.yml
+  - type: FinOps
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/bscscan/refs/heads/main/finops/finops.yml
+  - type: Signup
+    url: https://bscscan.com/register
+  - type: Authentication
+    url: https://info.bscscan.com/myapikey/
+  - type: TermsOfService
+    url: https://bscscan.com/terms
+  - type: PrivacyPolicy
+    url: https://bscscan.com/privacyPolicy
+- aid: bscscan:bscscan-stats-api
+  name: BscScan Stats API
+  description: The Stats API from BscScan — 13 operation(s) for stats.
+  humanURL: https://bscscan.com
+  baseURL: https://api.bscscan.com/v2/api
+  tags:
+  - Stats
+  properties:
+  - type: OpenAPI
+    url: openapi/bscscan-stats-api-openapi.yml
+  - type: Documentation
+    url: https://info.bscscan.com/apis/
+  - type: Plans
+    url: https://raw.githubusercontent.com/api-evangelist/bscscan/refs/heads/main/plans/plans.yml
+  - type: RateLimits
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/bscscan/refs/heads/main/rate-limits/rate-limits.yml
+  - type: FinOps
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/bscscan/refs/heads/main/finops/finops.yml
+  - type: Signup
+    url: https://bscscan.com/register
+  - type: Authentication
+    url: https://info.bscscan.com/myapikey/
+  - type: TermsOfService
+    url: https://bscscan.com/terms
+  - type: PrivacyPolicy
+    url: https://bscscan.com/privacyPolicy
+- aid: bscscan:bscscan-tokens-api
+  name: BscScan Tokens API
+  description: The Tokens API from BscScan — 9 operation(s) for tokens.
+  humanURL: https://bscscan.com
+  baseURL: https://api.bscscan.com/v2/api
+  tags:
+  - Tokens
+  properties:
+  - type: OpenAPI
+    url: openapi/bscscan-tokens-api-openapi.yml
+  - type: Documentation
+    url: https://info.bscscan.com/apis/
+  - type: Plans
+    url: https://raw.githubusercontent.com/api-evangelist/bscscan/refs/heads/main/plans/plans.yml
+  - type: RateLimits
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/bscscan/refs/heads/main/rate-limits/rate-limits.yml
+  - type: FinOps
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/bscscan/refs/heads/main/finops/finops.yml
+  - type: Signup
+    url: https://bscscan.com/register
+  - type: Authentication
+    url: https://info.bscscan.com/myapikey/
+  - type: TermsOfService
+    url: https://bscscan.com/terms
+  - type: PrivacyPolicy
+    url: https://bscscan.com/privacyPolicy
+- aid: bscscan:bscscan-transactions-api
+  name: BscScan Transactions API
+  description: The Transactions API from BscScan — 2 operation(s) for transactions.
+  humanURL: https://bscscan.com
+  baseURL: https://api.bscscan.com/v2/api
+  tags:
+  - Transactions
+  properties:
+  - type: OpenAPI
+    url: openapi/bscscan-transactions-api-openapi.yml
+  - type: Documentation
+    url: https://info.bscscan.com/apis/
+  - type: Plans
+    url: https://raw.githubusercontent.com/api-evangelist/bscscan/refs/heads/main/plans/plans.yml
+  - type: RateLimits
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/bscscan/refs/heads/main/rate-limits/rate-limits.yml
+  - type: FinOps
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/bscscan/refs/heads/main/finops/finops.yml
+  - type: Signup
+    url: https://bscscan.com/register
+  - type: Authentication
+    url: https://info.bscscan.com/myapikey/
+  - type: TermsOfService
+    url: https://bscscan.com/terms
+  - type: PrivacyPolicy
+    url: https://bscscan.com/privacyPolicy
 maintainers:
   - FN: API Evangelist
     url: https://apievangelist.com
