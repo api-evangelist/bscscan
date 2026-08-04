@@ -1,0 +1,37 @@
+{
+  "provider": "bscscan",
+  "sources": [
+    "bscscan-accounts-api-openapi.yml",
+    "bscscan-api-pro-endpoints-api-openapi.yml",
+    "bscscan-blocks-api-openapi.yml",
+    "bscscan-contracts-api-openapi.yml",
+    "bscscan-gas-tracker-api-openapi.yml",
+    "bscscan-geth-parity-proxy-api-openapi.yml",
+    "bscscan-logs-api-openapi.yml",
+    "bscscan-stats-api-openapi.yml",
+    "bscscan-tokens-api-openapi.yml",
+    "bscscan-transactions-api-openapi.yml",
+    "openapi.yml"
+  ],
+  "outputs": [
+    "bscscan-accounts-api-openapi.yml",
+    "bscscan-api-pro-endpoints-api-openapi.yml",
+    "bscscan-blocks-api-openapi.yml",
+    "bscscan-contracts-api-openapi.yml",
+    "bscscan-gas-tracker-api-openapi.yml",
+    "bscscan-geth-parity-proxy-api-openapi.yml",
+    "bscscan-logs-api-openapi.yml",
+    "bscscan-stats-api-openapi.yml",
+    "bscscan-tokens-api-openapi.yml",
+    "bscscan-transactions-api-openapi.yml"
+  ],
+  "archived": [
+    "archived openapi.yml"
+  ],
+  "errors": [],
+  "warnings": [],
+  "notes": [
+    "discovered stray spec: openapi.yml"
+  ],
+  "skipped": []
+}
