@@ -1,0 +1,1393 @@
+{
+  "item": [
+    {
+      "id": "ce790ba6-f580-4370-94fa-125645d777f3",
+      "name": "Stats",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "6890ba55-61b4-442f-a605-a12e80d9be88",
+          "name": "Get Total Supply of Ether",
+          "request": {
+            "name": "Get Total Supply of Ether",
+            "description": {
+              "content": "Returns the current amount of Ether in circulation excluding ETH2 Staking rewards and EIP1559 burnt fees.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                ""
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "module",
+                  "value": "stats"
+                },
+                {
+                  "key": "action",
+                  "value": "ethsupply"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "fcbf34f9-6e08-4786-a381-cca9524cf068",
+              "name": "Operation result. 📖 Tip : Easily convert Ethereum units using our unit converter.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ""
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "apikey",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"status\": \"1\",\n  \"message\": \"OK\",\n  \"result\": \"116487067186500000000000000\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "b74097da-2c57-4499-b230-26ef63f3863b",
+          "name": "Get Total Supply of Ether 2",
+          "request": {
+            "name": "Get Total Supply of Ether 2",
+            "description": {
+              "content": "Returns the current amount of Ether in circulation, ETH2 Staking rewards, EIP1559 burnt fees, and total withdrawn ETH from the beacon chain.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                ""
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "module",
+                  "value": "stats"
+                },
+                {
+                  "key": "action",
+                  "value": "ethsupply2"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "806a231a-6c4a-484b-8999-683613cb8756",
+              "name": "Operation result. 📝 Note: The EthSupply is calculated before adding ETH minted as Eth2Staking rewards and subtracting BurntFees from EIP-1559. For more information, check out our Ether Total Supply Dashboard.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ""
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "apikey",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"status\": \"1\",\n  \"message\": \"OK\",\n  \"result\": {\n    \"EthSupply\": \"122373866217800000000000000\",\n    \"Eth2Staking\": \"1157529105115885000000000\",\n    \"BurntFees\": \"3102505506455601519229842\",\n    \"WithdrawnTotal\": \"1170200333006131000000000\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "0cac2592-67c6-4067-994b-c882166287bd",
+          "name": "Get Ether Last Price",
+          "request": {
+            "name": "Get Ether Last Price",
+            "description": {
+              "content": "Returns the latest price of 1 ETH.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                ""
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "module",
+                  "value": "stats"
+                },
+                {
+                  "key": "action",
+                  "value": "ethprice"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "7950ccc0-b6da-448f-af25-8e4f0119fe50",
+              "name": "Operation result. ⏳ Tip : The timestamps are represented in Unix timestamp.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ""
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "apikey",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"status\": \"1\",\n  \"message\": \"OK\",\n  \"result\": {\n    \"ethbtc\": \"0.06116\",\n    \"ethbtc_timestamp\": \"1624961308\",\n    \"ethusd\": \"2149.18\",\n    \"ethusd_timestamp\": \"1624961308\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "e5f2c84c-9741-42ae-95c3-7fe3995cd091",
+          "name": "Get Ethereum Nodes Size",
+          "request": {
+            "name": "Get Ethereum Nodes Size",
+            "description": {
+              "content": "Returns the size of the Ethereum blockchain, in bytes, over a date range.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                ""
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "module",
+                  "value": "stats"
+                },
+                {
+                  "key": "action",
+                  "value": "chainsize"
+                },
+                {
+                  "disabled": false,
+                  "key": "startdate",
+                  "value": "<date>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "enddate",
+                  "value": "<date>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "clienttype",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "syncmode",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "sort",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "9ff000d5-bb16-4660-a16a-22f98db85797",
+              "name": "Operation result. ⛓️ Tip : The chainSize is represented in bytes.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ""
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "startdate",
+                      "value": "2019-02-01"
+                    },
+                    {
+                      "key": "enddate",
+                      "value": "2019-02-28"
+                    },
+                    {
+                      "key": "clienttype",
+                      "value": "geth"
+                    },
+                    {
+                      "key": "syncmode",
+                      "value": "default"
+                    },
+                    {
+                      "key": "sort",
+                      "value": "asc"
+                    },
+                    {
+                      "key": "apikey",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"status\": \"1\",\n  \"message\": \"OK\",\n  \"result\": [\n    {\n      \"blockNumber\": \"7156164\",\n      \"chainTimeStamp\": \"2019-02-01\",\n      \"chainSize\": \"184726421279\",\n      \"clientType\": \"Geth\",\n      \"syncMode\": \"Default\"\n    },\n    {\n      \"blockNumber\": \"7276521\",\n      \"chainTimeStamp\": \"2019-02-28\",\n      \"chainSize\": \"197073145113\",\n      \"clientType\": \"Geth\",\n      \"syncMode\": \"Default\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "f5ebefe8-5038-4ffa-9d65-a9b80703c04a",
+          "name": "Get Total Nodes Count",
+          "request": {
+            "name": "Get Total Nodes Count",
+            "description": {
+              "content": "Returns the total number of discoverable Ethereum nodes.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                ""
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "module",
+                  "value": "stats"
+                },
+                {
+                  "key": "action",
+                  "value": "nodecount"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "665ec6ba-b851-473f-8408-a7f304c20176",
+              "name": "Operation result.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ""
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "apikey",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"status\": \"1\",\n  \"message\": \"OK\",\n  \"result\": {\n    \"UTCDate\": \"2021-06-29\",\n    \"TotalNodeCount\": \"6413\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "7398195d-85b7-4cec-acab-a0b9974ca25f",
+          "name": "Get Daily Network Transaction Fee",
+          "request": {
+            "name": "Get Daily Network Transaction Fee",
+            "description": {
+              "content": "Returns the amount of transaction fees paid to miners per day. PRO endpoint.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                ""
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "module",
+                  "value": "stats"
+                },
+                {
+                  "key": "action",
+                  "value": "dailytxnfee"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "0ad13af5-b4ac-4e66-9480-f03ac714e4d2",
+              "name": "Operation result.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ""
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "apikey",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"status\": \"1\",\n  \"message\": \"OK\",\n  \"result\": [\n    {\n      \"UTCDate\": \"2019-02-01\",\n      \"unixTimeStamp\": \"1548979200\",\n      \"transactionFee_Eth\": \"358.558440870590355682\"\n    },\n    {\n      \"UTCDate\": \"2019-02-28\",\n      \"unixTimeStamp\": \"1551312000\",\n      \"transactionFee_Eth\": \"545.141762162356907132\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "c9cc0c6a-2631-4585-9684-70bdb7865589",
+          "name": "Get Daily New Address Count",
+          "request": {
+            "name": "Get Daily New Address Count",
+            "description": {
+              "content": "Returns the number of new Ethereum addresses created per day. PRO endpoint.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                ""
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "module",
+                  "value": "stats"
+                },
+                {
+                  "key": "action",
+                  "value": "dailynewaddress"
+                },
+                {
+                  "disabled": false,
+                  "key": "startdate",
+                  "value": "<date>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "enddate",
+                  "value": "<date>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "sort",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "f80ec420-b45a-4f33-bf33-c06bf8ab87fa",
+              "name": "Operation result.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ""
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "startdate",
+                      "value": "2019-02-01"
+                    },
+                    {
+                      "key": "enddate",
+                      "value": "2019-02-28"
+                    },
+                    {
+                      "key": "sort",
+                      "value": "asc"
+                    },
+                    {
+                      "key": "apikey",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"status\": \"1\",\n  \"message\": \"OK\",\n  \"result\": [\n    {\n      \"UTCDate\": \"2019-02-01\",\n      \"unixTimeStamp\": \"1548979200\",\n      \"newAddressCount\": 54081\n    },\n    {\n      \"UTCDate\": \"2019-02-28\",\n      \"unixTimeStamp\": \"1551312000\",\n      \"newAddressCount\": 53117\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "0481d6ae-ccc2-44cb-b606-4847236d8ce2",
+          "name": "Get Daily Network Utilization",
+          "request": {
+            "name": "Get Daily Network Utilization",
+            "description": {
+              "content": "Returns the daily average gas used over gas limit, in percentage. PRO endpoint.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                ""
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "module",
+                  "value": "stats"
+                },
+                {
+                  "key": "action",
+                  "value": "dailynetutilization"
+                },
+                {
+                  "disabled": false,
+                  "key": "startdate",
+                  "value": "<date>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "enddate",
+                  "value": "<date>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "sort",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "45333db9-1463-400a-8cb0-88cb7b3146d8",
+              "name": "Operation result.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ""
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "startdate",
+                      "value": "2019-02-01"
+                    },
+                    {
+                      "key": "enddate",
+                      "value": "2019-02-28"
+                    },
+                    {
+                      "key": "sort",
+                      "value": "asc"
+                    },
+                    {
+                      "key": "apikey",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"status\": \"1\",\n  \"message\": \"OK\",\n  \"result\": [\n    {\n      \"UTCDate\": \"2019-02-01\",\n      \"unixTimeStamp\": \"1548979200\",\n      \"networkUtilization\": \"0.8464\"\n    },\n    {\n      \"UTCDate\": \"2019-02-28\",\n      \"unixTimeStamp\": \"1551312000\",\n      \"networkUtilization\": \"0.9472\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "75dfac58-a7fd-43d5-8591-b3ec639adb1a",
+          "name": "Get Daily Average Network Hash Rate",
+          "request": {
+            "name": "Get Daily Average Network Hash Rate",
+            "description": {
+              "content": "Returns the historical measure of processing power of the Ethereum network. PRO endpoint.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                ""
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "module",
+                  "value": "stats"
+                },
+                {
+                  "key": "action",
+                  "value": "dailyavghashrate"
+                },
+                {
+                  "disabled": false,
+                  "key": "startdate",
+                  "value": "<date>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "enddate",
+                  "value": "<date>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "sort",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "4e382f02-3056-4ec0-be67-7b9c6cba0cfc",
+              "name": "Operation result. 🔥 Tip : The networkHashRate is represented in GigaHashes ( GH/s ).",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ""
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "startdate",
+                      "value": "2019-02-01"
+                    },
+                    {
+                      "key": "enddate",
+                      "value": "2019-02-28"
+                    },
+                    {
+                      "key": "sort",
+                      "value": "asc"
+                    },
+                    {
+                      "key": "apikey",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"status\": \"1\",\n  \"message\": \"OK\",\n  \"result\": [\n    {\n      \"UTCDate\": \"2019-02-01\",\n      \"unixTimeStamp\": \"1548979200\",\n      \"networkHashRate\": \"143116.0140\"\n    },\n    {\n      \"UTCDate\": \"2019-02-28\",\n      \"unixTimeStamp\": \"1551312000\",\n      \"networkHashRate\": \"157689.3983\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "ef98358c-8879-476d-84fd-5ddc19d31e04",
+          "name": "Get Daily Transaction Count",
+          "request": {
+            "name": "Get Daily Transaction Count",
+            "description": {
+              "content": "Returns the number of transactions performed on the Ethereum blockchain per day. PRO endpoint.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                ""
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "module",
+                  "value": "stats"
+                },
+                {
+                  "key": "action",
+                  "value": "dailytx"
+                },
+                {
+                  "disabled": false,
+                  "key": "startdate",
+                  "value": "<date>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "enddate",
+                  "value": "<date>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "sort",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "41289b48-0642-431c-8e85-3bced6c695c7",
+              "name": "Operation result.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ""
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "startdate",
+                      "value": "2019-02-01"
+                    },
+                    {
+                      "key": "enddate",
+                      "value": "2019-02-28"
+                    },
+                    {
+                      "key": "sort",
+                      "value": "asc"
+                    },
+                    {
+                      "key": "apikey",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"status\": \"1\",\n  \"message\": \"OK\",\n  \"result\": [\n    {\n      \"UTCDate\": \"2019-02-01\",\n      \"unixTimeStamp\": \"1548979200\",\n      \"transactionCount\": 498856\n    },\n    {\n      \"UTCDate\": \"2019-02-28\",\n      \"unixTimeStamp\": \"1551312000\",\n      \"transactionCount\": 541458\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "0c105490-e260-4a64-a2bb-d19df8bc94c2",
+          "name": "Get Daily Average Network Difficulty",
+          "request": {
+            "name": "Get Daily Average Network Difficulty",
+            "description": {
+              "content": "Returns the historical mining difficulty of the Ethereum network. PRO endpoint.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                ""
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "module",
+                  "value": "stats"
+                },
+                {
+                  "key": "action",
+                  "value": "dailyavgnetdifficulty"
+                },
+                {
+                  "disabled": false,
+                  "key": "startdate",
+                  "value": "<date>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "enddate",
+                  "value": "<date>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "sort",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "1c3caa4e-545d-4aab-abde-4042cfd45d42",
+              "name": "Operation result. ​​ 🔥 Tip : The networkDifficulty is represented in TeraHashes ( TH/s ).",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ""
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "startdate",
+                      "value": "2019-02-01"
+                    },
+                    {
+                      "key": "enddate",
+                      "value": "2019-02-28"
+                    },
+                    {
+                      "key": "sort",
+                      "value": "asc"
+                    },
+                    {
+                      "key": "apikey",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"status\": \"1\",\n  \"message\": \"OK\",\n  \"result\": [\n    {\n      \"UTCDate\": \"2019-02-01\",\n      \"unixTimeStamp\": \"1548979200\",\n      \"networkDifficulty\": \"2,408.028\"\n    },\n    {\n      \"UTCDate\": \"2019-02-28\",\n      \"unixTimeStamp\": \"1551312000\",\n      \"networkDifficulty\": \"2,927.453\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "ad08c4f2-d3ce-4ab2-9956-0922ab33726b",
+          "name": "Get Ether Historical Daily Market Cap",
+          "request": {
+            "name": "Get Ether Historical Daily Market Cap",
+            "description": {
+              "content": "Returns the historical Ether daily market capitalization. PRO endpoint.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                ""
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "module",
+                  "value": "stats"
+                },
+                {
+                  "key": "action",
+                  "value": "ethdailymarketcap"
+                },
+                {
+                  "disabled": false,
+                  "key": "startdate",
+                  "value": "<date>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "enddate",
+                  "value": "<date>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "sort",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "94115c02-a188-4a07-930a-1dc03f6bdf2f",
+              "name": "Operation result. ​​ 💰 Tip : The marketCap is represented in million US Dollars ( USD ).",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ""
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "startdate",
+                      "value": "2019-02-01"
+                    },
+                    {
+                      "key": "enddate",
+                      "value": "2019-02-28"
+                    },
+                    {
+                      "key": "sort",
+                      "value": "asc"
+                    },
+                    {
+                      "key": "apikey",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"status\": \"1\",\n  \"message\": \"OK\",\n  \"result\": [\n    {\n      \"UTCDate\": \"2019-02-01\",\n      \"unixTimeStamp\": \"1548979200\",\n      \"supply\": \"104672819.281250\",\n      \"marketCap\": \"11203.1318476721875\",\n      \"price\": \"107.03\"\n    },\n    {\n      \"UTCDate\": \"2019-02-28\",\n      \"unixTimeStamp\": \"1551312000\",\n      \"supply\": \"105048576.406250\",\n      \"marketCap\": \"14317.0704784078125\",\n      \"price\": \"136.29\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "409df210-e877-4d95-8030-2ee30fc41adb",
+          "name": "Get Ether Historical Price",
+          "request": {
+            "name": "Get Ether Historical Price",
+            "description": {
+              "content": "Returns the historical price of 1 ETH. PRO endpoint.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                ""
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "module",
+                  "value": "stats"
+                },
+                {
+                  "key": "action",
+                  "value": "ethdailyprice"
+                },
+                {
+                  "disabled": false,
+                  "key": "startdate",
+                  "value": "<date>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "enddate",
+                  "value": "<date>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "sort",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "581045ba-26d3-4831-98e4-6e1bc1315c1c",
+              "name": "Operation result. ​​ 💰 Tip : The value is represented in US Dollars ( USD ).",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ""
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "startdate",
+                      "value": "2019-02-01"
+                    },
+                    {
+                      "key": "enddate",
+                      "value": "2019-02-28"
+                    },
+                    {
+                      "key": "sort",
+                      "value": "asc"
+                    },
+                    {
+                      "key": "apikey",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"status\": \"1\",\n  \"message\": \"OK\",\n  \"result\": [\n    {\n      \"UTCDate\": \"2019-02-01\",\n      \"unixTimeStamp\": \"1548979200\",\n      \"value\": \"107.03\"\n    },\n    {\n      \"UTCDate\": \"2019-02-28\",\n      \"unixTimeStamp\": \"1551312000\",\n      \"value\": \"136.29\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.bscscan.com/v2/api",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "apikey"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "query"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "79de5769-b421-415f-9adb-bc95e27eb1c0",
+    "name": "BscScan Accounts Stats API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "BscScan is the leading block explorer and analytics platform for BNB Smart Chain (BSC), providing a REST API for querying transactions, token transfers, smart contract ABIs, gas prices, BEP-20 token information, and on-chain statistics. API subscriptions are unified under the Etherscan V2 platform, enabling access to 60+ EVM chains via a single API key using the chainid parameter (BSC chainid=56).",
+      "type": "text/plain"
+    }
+  }
+}

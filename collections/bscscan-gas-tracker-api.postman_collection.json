@@ -1,0 +1,566 @@
+{
+  "item": [
+    {
+      "id": "a674e460-b937-4b0e-8889-3a5f8a1e1913",
+      "name": "Gas Tracker",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "70fa6eec-c208-4d27-8fa9-f150aefed081",
+          "name": "Get Estimation of Confirmation Time",
+          "request": {
+            "name": "Get Estimation of Confirmation Time",
+            "description": {
+              "content": "Returns the estimated time, in seconds, for a transaction to be confirmed on the blockchain.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                ""
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "module",
+                  "value": "gastracker"
+                },
+                {
+                  "key": "action",
+                  "value": "gasestimate"
+                },
+                {
+                  "disabled": false,
+                  "key": "gasprice",
+                  "value": "<integer>",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "7ffd6af4-1233-40e7-bd9f-bf800e442092",
+              "name": "Operation result. 📝 Note: The result is returned in seconds.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ""
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "gasprice",
+                      "value": "4149"
+                    },
+                    {
+                      "key": "apikey",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"status\": \"1\",\n  \"message\": \"OK\",\n  \"result\": \"9227\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "5b102a81-5aec-4c3d-ad79-ace6512e65a8",
+          "name": "Get Gas Oracle",
+          "request": {
+            "name": "Get Gas Oracle",
+            "description": {
+              "content": "Returns the current Safe, Proposed and Fast gas prices. Post EIP-1559 🔥 changes :Safe/Proposed/Fast gas price recommendations are now modeled as Priority Fees.New field suggestBaseFee , the baseFee of the next pending blockNew field gasUsedRatio, to estimate how busy the network isLearn more about the gas changes in EIP-1559.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                ""
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "module",
+                  "value": "gastracker"
+                },
+                {
+                  "key": "action",
+                  "value": "gasoracle"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "5a3c8c4c-0442-4951-b5ec-7e634ac37c15",
+              "name": "Operation result. ⛽ Note: The gas prices are returned in Gwei.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ""
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "apikey",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"status\": \"1\",\n  \"message\": \"OK\",\n  \"result\": {\n    \"LastBlock\": \"13053741\",\n    \"SafeGasPrice\": \"20\",\n    \"ProposeGasPrice\": \"22\",\n    \"FastGasPrice\": \"24\",\n    \"suggestBaseFee\": \"19.230609716\",\n    \"gasUsedRatio\": \"0.370119078777807,0.8954731,0.550911766666667,0.212457033333333,0.552463633333333\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "7393a1cd-2158-4b7d-95cc-e6da8692d439",
+          "name": "Get Daily Average Gas Limit",
+          "request": {
+            "name": "Get Daily Average Gas Limit",
+            "description": {
+              "content": "Returns the historical daily average gas limit of the Ethereum network. PRO endpoint.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                ""
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "module",
+                  "value": "stats"
+                },
+                {
+                  "key": "action",
+                  "value": "dailyavggaslimit"
+                },
+                {
+                  "disabled": false,
+                  "key": "startdate",
+                  "value": "<date>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "enddate",
+                  "value": "<date>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "sort",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "1d90ce6b-01f5-4894-99a0-6c02768de5fc",
+              "name": "Operation result.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ""
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "startdate",
+                      "value": "2019-02-01"
+                    },
+                    {
+                      "key": "enddate",
+                      "value": "2019-02-28"
+                    },
+                    {
+                      "key": "sort",
+                      "value": "asc"
+                    },
+                    {
+                      "key": "apikey",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"status\": \"1\",\n  \"message\": \"OK\",\n  \"result\": [\n    {\n      \"UTCDate\": \"2019-02-01\",\n      \"unixTimeStamp\": \"1548979200\",\n      \"gasLimit\": \"8001360\"\n    },\n    {\n      \"UTCDate\": \"2019-02-27\",\n      \"unixTimeStamp\": \"1551225600\",\n      \"gasLimit\": \"8001071\"\n    },\n    {\n      \"UTCDate\": \"2019-02-28\",\n      \"unixTimeStamp\": \"1551312000\",\n      \"gasLimit\": \"8001137\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "db36f179-11c4-481e-9adc-25cbd9e9ce1f",
+          "name": "Get Ethereum Daily Total Gas Used",
+          "request": {
+            "name": "Get Ethereum Daily Total Gas Used",
+            "description": {
+              "content": "Returns the total amount of gas used daily for transctions on the Ethereum network. PRO endpoint.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                ""
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "module",
+                  "value": "stats"
+                },
+                {
+                  "key": "action",
+                  "value": "dailygasused"
+                },
+                {
+                  "disabled": false,
+                  "key": "startdate",
+                  "value": "<date>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "enddate",
+                  "value": "<date>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "sort",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "fd64c256-8ea4-4744-a5e4-ae4ab37130c6",
+              "name": "Operation result.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ""
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "startdate",
+                      "value": "2019-02-01"
+                    },
+                    {
+                      "key": "enddate",
+                      "value": "2019-02-28"
+                    },
+                    {
+                      "key": "sort",
+                      "value": "asc"
+                    },
+                    {
+                      "key": "apikey",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"status\": \"1\",\n  \"message\": \"OK\",\n  \"result\": [\n    {\n      \"UTCDate\": \"2019-02-01\",\n      \"unixTimeStamp\": \"1548979200\",\n      \"gasUsed\": \"32761450415\"\n    },\n    {\n      \"UTCDate\": \"2019-02-27\",\n      \"unixTimeStamp\": \"1551225600\",\n      \"gasUsed\": \"32657440136\"\n    },\n    {\n      \"UTCDate\": \"2019-02-28\",\n      \"unixTimeStamp\": \"1551312000\",\n      \"gasUsed\": \"33081119561\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "f741eec3-54b1-45ac-8c06-2ed11cb492a2",
+          "name": "Get Daily Average Gas Price",
+          "request": {
+            "name": "Get Daily Average Gas Price",
+            "description": {
+              "content": "Returns the daily average gas price used on the Ethereum network. PRO endpoint.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                ""
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "module",
+                  "value": "stats"
+                },
+                {
+                  "key": "action",
+                  "value": "dailyavggasprice"
+                },
+                {
+                  "disabled": false,
+                  "key": "startdate",
+                  "value": "<date>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "enddate",
+                  "value": "<date>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "sort",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "d36f24d1-9900-4d85-8d45-482688b4db16",
+              "name": "Operation result.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ""
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "startdate",
+                      "value": "2019-02-01"
+                    },
+                    {
+                      "key": "enddate",
+                      "value": "2019-02-28"
+                    },
+                    {
+                      "key": "sort",
+                      "value": "asc"
+                    },
+                    {
+                      "key": "apikey",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"status\": \"1\",\n  \"message\": \"OK\",\n  \"result\": [\n    {\n      \"UTCDate\": \"2019-02-01\",\n      \"unixTimeStamp\": \"1548979200\",\n      \"maxGasPrice_Wei\": \"60814303896257\",\n      \"minGasPrice_Wei\": \"432495\",\n      \"avgGasPrice_Wei\": \"13234562600\"\n    },\n    {\n      \"UTCDate\": \"2019-02-27\",\n      \"unixTimeStamp\": \"1551225600\",\n      \"maxGasPrice_Wei\": \"42000000000000\",\n      \"minGasPrice_Wei\": \"1000000\",\n      \"avgGasPrice_Wei\": \"16334617513\"\n    },\n    {\n      \"UTCDate\": \"2019-02-28\",\n      \"unixTimeStamp\": \"1551312000\",\n      \"maxGasPrice_Wei\": \"237222222222257\",\n      \"minGasPrice_Wei\": \"100000000\",\n      \"avgGasPrice_Wei\": \"18834674068\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.bscscan.com/v2/api",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "apikey"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "query"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "150ac67b-8982-4609-a2f8-531768c0b4e7",
+    "name": "BscScan Accounts Gas Tracker API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "BscScan is the leading block explorer and analytics platform for BNB Smart Chain (BSC), providing a REST API for querying transactions, token transfers, smart contract ABIs, gas prices, BEP-20 token information, and on-chain statistics. API subscriptions are unified under the Etherscan V2 platform, enabling access to 60+ EVM chains via a single API key using the chainid parameter (BSC chainid=56).",
+      "type": "text/plain"
+    }
+  }
+}
