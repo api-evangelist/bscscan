@@ -15,6 +15,16 @@ accessModel:
   method: derived
 image: https://bscscan.com/images/svg/brands/bscscan-logo-circle.svg
 tags:
+  - Blockchain
+  - Block Explorer
+  - BNB Smart Chain
+  - BSC
+  - BEP-20
+  - Transaction
+  - Smart Contracts
+  - DeFi
+  - EVM
+tags_raw:
   - blockchain
   - block-explorer
   - BNB Smart Chain
@@ -35,6 +45,8 @@ apis:
   humanURL: https://bscscan.com
   baseURL: https://api.bscscan.com/v2/api
   tags:
+  - Account
+  tags_raw:
   - Accounts
   properties:
   - type: OpenAPI
@@ -287,6 +299,8 @@ apis:
   humanURL: https://bscscan.com
   baseURL: https://api.bscscan.com/v2/api
   tags:
+  - Transaction
+  tags_raw:
   - Transactions
   properties:
   - type: OpenAPI
