@@ -10,8 +10,7 @@
     "bscscan-logs-api-openapi.yml",
     "bscscan-stats-api-openapi.yml",
     "bscscan-tokens-api-openapi.yml",
-    "bscscan-transactions-api-openapi.yml",
-    "openapi.yml"
+    "bscscan-transactions-api-openapi.yml"
   ],
   "outputs": [
     "bscscan-accounts-api-openapi.yml",
@@ -25,13 +24,21 @@
     "bscscan-tokens-api-openapi.yml",
     "bscscan-transactions-api-openapi.yml"
   ],
-  "archived": [
-    "archived openapi.yml"
-  ],
+  "archived": [],
   "errors": [],
   "warnings": [],
   "notes": [
-    "discovered stray spec: openapi.yml"
+    "bscscan-accounts-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "bscscan-api-pro-endpoints-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "bscscan-blocks-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "bscscan-contracts-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "bscscan-gas-tracker-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "bscscan-geth-parity-proxy-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "bscscan-logs-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "bscscan-stats-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "bscscan-tokens-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "bscscan-transactions-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "apis.yml register: already-registered"
   ],
   "skipped": []
 }

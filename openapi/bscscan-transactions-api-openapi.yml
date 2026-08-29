@@ -1,4 +1,4 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
   title: BscScan Accounts Transactions API
   version: 1.0.0
@@ -83,6 +83,23 @@ paths:
                   status: '1'
 components:
   schemas:
+    ResponseOK:
+      type: object
+      properties:
+        status:
+          type: string
+          enum:
+          - '1'
+        message:
+          type: string
+          enum:
+          - OK
+        result:
+          description: call result
+      required:
+      - status
+      - message
+      - result
     ResponseNOTOK:
       type: object
       properties:
@@ -105,23 +122,6 @@ components:
     Result.transaction.getstatus:
       type: object
       additionalProperties: true
-    ResponseOK:
-      type: object
-      properties:
-        status:
-          type: string
-          enum:
-          - '1'
-        message:
-          type: string
-          enum:
-          - OK
-        result:
-          description: call result
-      required:
-      - status
-      - message
-      - result
     Result.transaction.gettxreceiptstatus:
       type: object
       additionalProperties: true

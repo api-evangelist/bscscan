@@ -1,4 +1,4 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
   title: BscScan Accounts API PRO Endpoints API
   version: 1.0.0
@@ -978,172 +978,6 @@ paths:
                   value: '136.29'
 components:
   schemas:
-    Result.stats.dailytx:
-      type: object
-      properties:
-        result:
-          type: array
-          items:
-            type: object
-            properties:
-              UTCDate:
-                $ref: '#/components/schemas/DateYYYYMMDD'
-              unixTimeStamp:
-                $ref: '#/components/schemas/UnixTimestampString'
-              transactionCount:
-                $ref: '#/components/schemas/IntegerMin0'
-    Result.stats.dailygasused:
-      type: object
-      properties:
-        result:
-          type: array
-          items:
-            type: object
-            properties:
-              UTCDate:
-                $ref: '#/components/schemas/DateYYYYMMDD'
-              unixTimeStamp:
-                $ref: '#/components/schemas/UnixTimestampString'
-              gasUsed:
-                $ref: '#/components/schemas/IntegerMin0String'
-    Result.stats.dailyavgblocktime:
-      type: object
-      properties:
-        result:
-          type: array
-          items:
-            type: object
-            properties:
-              UTCDate:
-                $ref: '#/components/schemas/DateYYYYMMDD'
-              unixTimeStamp:
-                $ref: '#/components/schemas/UnixTimestampString'
-              blockTime_sec:
-                $ref: '#/components/schemas/FloatString'
-    AddressHash:
-      type: string
-      pattern: 0x[A-Fa-f0-9]{40}
-      example: '0x01234567890abcdef01234567890abcdef012345'
-    Result.stats.dailynewaddress:
-      type: object
-      properties:
-        result:
-          type: array
-          items:
-            type: object
-            properties:
-              UTCDate:
-                $ref: '#/components/schemas/DateYYYYMMDD'
-              unixTimeStamp:
-                $ref: '#/components/schemas/UnixTimestampString'
-              newAddressCount:
-                $ref: '#/components/schemas/IntegerMin0'
-    Result.stats.ethdailymarketcap:
-      type: object
-      properties:
-        result:
-          type: array
-          items:
-            type: object
-            properties:
-              UTCDate:
-                $ref: '#/components/schemas/DateYYYYMMDD'
-              unixTimeStamp:
-                $ref: '#/components/schemas/UnixTimestampString'
-              supply:
-                $ref: '#/components/schemas/FloatString'
-              marketCap:
-                $ref: '#/components/schemas/FloatString'
-              price:
-                $ref: '#/components/schemas/FloatString'
-    Result.account.balancehistory:
-      type: object
-      properties:
-        result:
-          $ref: '#/components/schemas/IntegerMin0String'
-    IntegerMin0:
-      type: integer
-      minimum: 0
-    Result.stats.dailynetutilization:
-      type: object
-      properties:
-        result:
-          type: array
-          items:
-            type: object
-            properties:
-              UTCDate:
-                $ref: '#/components/schemas/DateYYYYMMDD'
-              unixTimeStamp:
-                $ref: '#/components/schemas/UnixTimestampString'
-              networkUtilization:
-                $ref: '#/components/schemas/FloatString'
-    Result.stats.dailyavgblocksize:
-      type: object
-      properties:
-        result:
-          type: array
-          items:
-            type: object
-            properties:
-              UTCDate:
-                $ref: '#/components/schemas/DateYYYYMMDD'
-              unixTimeStamp:
-                $ref: '#/components/schemas/UnixTimestampString'
-              blockSize_bytes:
-                $ref: '#/components/schemas/IntegerMin0'
-    ResponseOK:
-      type: object
-      properties:
-        status:
-          type: string
-          enum:
-          - '1'
-        message:
-          type: string
-          enum:
-          - OK
-        result:
-          description: call result
-      required:
-      - status
-      - message
-      - result
-    Result.stats.dailyavghashrate:
-      type: object
-      properties:
-        result:
-          type: array
-          items:
-            type: object
-            properties:
-              UTCDate:
-                $ref: '#/components/schemas/DateYYYYMMDD'
-              unixTimeStamp:
-                $ref: '#/components/schemas/UnixTimestampString'
-              networkHashRate:
-                $ref: '#/components/schemas/FloatString'
-    Result.stats.dailyuncleblkcount:
-      type: object
-      properties:
-        result:
-          type: array
-          items:
-            type: object
-            properties:
-              UTCDate:
-                $ref: '#/components/schemas/DateYYYYMMDD'
-              unixTimeStamp:
-                $ref: '#/components/schemas/UnixTimestampString'
-              uncleBlockCount:
-                $ref: '#/components/schemas/IntegerMin0'
-              uncleBlockRewards_Eth:
-                $ref: '#/components/schemas/FloatString'
-    Result.stats.tokensupplyhistory:
-      type: object
-      properties:
-        result:
-          $ref: '#/components/schemas/IntegerMin0String'
     ResponseNOTOK:
       type: object
       properties:
@@ -1163,114 +997,6 @@ components:
       - status
       - message
       - result
-    Result.stats.dailyavgnetdifficulty:
-      type: object
-      properties:
-        result:
-          type: array
-          items:
-            type: object
-            properties:
-              UTCDate:
-                $ref: '#/components/schemas/DateYYYYMMDD'
-              unixTimeStamp:
-                $ref: '#/components/schemas/UnixTimestampString'
-              networkDifficulty:
-                $ref: '#/components/schemas/FloatWithCommasString'
-    DateYYYYMMDD:
-      type: string
-      format: date
-      description: A date in the YYYY-MM-DD format
-      example: '2019-02-01'
-    Result.stats.dailyavggaslimit:
-      type: object
-      properties:
-        result:
-          type: array
-          items:
-            type: object
-            properties:
-              UTCDate:
-                $ref: '#/components/schemas/DateYYYYMMDD'
-              unixTimeStamp:
-                $ref: '#/components/schemas/UnixTimestampString'
-              gasLimit:
-                $ref: '#/components/schemas/IntegerMin0String'
-    IntegerMin0String:
-      type: string
-      pattern: '[0-9]+'
-      description: An integer greater than 0 represented as a string.
-    Result.stats.dailytxnfee:
-      type: object
-      properties:
-        result:
-          type: array
-          items:
-            type: object
-            properties:
-              UTCDate:
-                $ref: '#/components/schemas/DateYYYYMMDD'
-              unixTimeStamp:
-                $ref: '#/components/schemas/UnixTimestampString'
-              transactionFee_Eth:
-                $ref: '#/components/schemas/FloatString'
-    PageSort:
-      type: string
-      enum:
-      - asc
-      - desc
-    FloatString:
-      type: string
-      pattern: ^\d+(\.\d+)?$
-      description: A float represented as a string.
-    Result.token.tokeninfo:
-      type: object
-      properties:
-        result:
-          type: array
-          items:
-            type: object
-            additionalProperties: true
-          maxItems: 1
-    Result.account.tokenbalancehistory:
-      type: object
-      properties:
-        result:
-          $ref: '#/components/schemas/IntegerMin0String'
-    FloatWithCommasString:
-      type: string
-      pattern: ^\d{1,3}(,?\d{3})*(\.\d+)?$
-      description: A float represented as a string, with optional comma delimiters
-    Result.stats.ethdailyprice:
-      type: object
-      properties:
-        result:
-          type: array
-          items:
-            type: object
-            properties:
-              UTCDate:
-                $ref: '#/components/schemas/DateYYYYMMDD'
-              unixTimeStamp:
-                $ref: '#/components/schemas/UnixTimestampString'
-              value:
-                $ref: '#/components/schemas/FloatString'
-    Result.stats.dailyblkcount:
-      type: object
-      properties:
-        result:
-          type: array
-          items:
-            type: object
-            properties:
-              UTCDate:
-                $ref: '#/components/schemas/DateYYYYMMDD'
-              unixTimeStamp:
-                $ref: '#/components/schemas/UnixTimestampString'
-              blockCount:
-                $ref: '#/components/schemas/IntegerMin0'
-              blockRewards_Eth:
-                $ref: '#/components/schemas/FloatString'
     Result.stats.dailyavggasprice:
       type: object
       properties:
@@ -1289,11 +1015,196 @@ components:
                 $ref: '#/components/schemas/IntegerMin0String'
               avgGasPrice_Wei:
                 $ref: '#/components/schemas/IntegerMin0String'
-    UnixTimestampString:
+    Result.stats.dailytx:
+      type: object
+      properties:
+        result:
+          type: array
+          items:
+            type: object
+            properties:
+              UTCDate:
+                $ref: '#/components/schemas/DateYYYYMMDD'
+              unixTimeStamp:
+                $ref: '#/components/schemas/UnixTimestampString'
+              transactionCount:
+                $ref: '#/components/schemas/IntegerMin0'
+    FloatWithCommasString:
       type: string
-      description: A Unix timestamp representing the number of seconds since January 1, 1970, expressed as a string.
-      pattern: ^[0-9]+$
-      example: '1623338323'
+      pattern: ^\d{1,3}(,?\d{3})*(\.\d+)?$
+      description: A float represented as a string, with optional comma delimiters
+    Result.stats.dailyavgblocksize:
+      type: object
+      properties:
+        result:
+          type: array
+          items:
+            type: object
+            properties:
+              UTCDate:
+                $ref: '#/components/schemas/DateYYYYMMDD'
+              unixTimeStamp:
+                $ref: '#/components/schemas/UnixTimestampString'
+              blockSize_bytes:
+                $ref: '#/components/schemas/IntegerMin0'
+    Result.account.balancehistory:
+      type: object
+      properties:
+        result:
+          $ref: '#/components/schemas/IntegerMin0String'
+    FloatString:
+      type: string
+      pattern: ^\d+(\.\d+)?$
+      description: A float represented as a string.
+    Result.stats.dailytxnfee:
+      type: object
+      properties:
+        result:
+          type: array
+          items:
+            type: object
+            properties:
+              UTCDate:
+                $ref: '#/components/schemas/DateYYYYMMDD'
+              unixTimeStamp:
+                $ref: '#/components/schemas/UnixTimestampString'
+              transactionFee_Eth:
+                $ref: '#/components/schemas/FloatString'
+    Result.token.tokeninfo:
+      type: object
+      properties:
+        result:
+          type: array
+          items:
+            type: object
+            additionalProperties: true
+          maxItems: 1
+    Result.stats.dailyuncleblkcount:
+      type: object
+      properties:
+        result:
+          type: array
+          items:
+            type: object
+            properties:
+              UTCDate:
+                $ref: '#/components/schemas/DateYYYYMMDD'
+              unixTimeStamp:
+                $ref: '#/components/schemas/UnixTimestampString'
+              uncleBlockCount:
+                $ref: '#/components/schemas/IntegerMin0'
+              uncleBlockRewards_Eth:
+                $ref: '#/components/schemas/FloatString'
+    AddressHash:
+      type: string
+      pattern: 0x[A-Fa-f0-9]{40}
+      example: '0x01234567890abcdef01234567890abcdef012345'
+    Result.stats.dailynetutilization:
+      type: object
+      properties:
+        result:
+          type: array
+          items:
+            type: object
+            properties:
+              UTCDate:
+                $ref: '#/components/schemas/DateYYYYMMDD'
+              unixTimeStamp:
+                $ref: '#/components/schemas/UnixTimestampString'
+              networkUtilization:
+                $ref: '#/components/schemas/FloatString'
+    IntegerMin0:
+      type: integer
+      minimum: 0
+    Result.stats.ethdailyprice:
+      type: object
+      properties:
+        result:
+          type: array
+          items:
+            type: object
+            properties:
+              UTCDate:
+                $ref: '#/components/schemas/DateYYYYMMDD'
+              unixTimeStamp:
+                $ref: '#/components/schemas/UnixTimestampString'
+              value:
+                $ref: '#/components/schemas/FloatString'
+    ResponseOK:
+      type: object
+      properties:
+        status:
+          type: string
+          enum:
+          - '1'
+        message:
+          type: string
+          enum:
+          - OK
+        result:
+          description: call result
+      required:
+      - status
+      - message
+      - result
+    Result.stats.dailynewaddress:
+      type: object
+      properties:
+        result:
+          type: array
+          items:
+            type: object
+            properties:
+              UTCDate:
+                $ref: '#/components/schemas/DateYYYYMMDD'
+              unixTimeStamp:
+                $ref: '#/components/schemas/UnixTimestampString'
+              newAddressCount:
+                $ref: '#/components/schemas/IntegerMin0'
+    DateYYYYMMDD:
+      type: string
+      format: date
+      description: A date in the YYYY-MM-DD format
+      example: '2019-02-01'
+    PageSort:
+      type: string
+      enum:
+      - asc
+      - desc
+    Result.stats.dailyavghashrate:
+      type: object
+      properties:
+        result:
+          type: array
+          items:
+            type: object
+            properties:
+              UTCDate:
+                $ref: '#/components/schemas/DateYYYYMMDD'
+              unixTimeStamp:
+                $ref: '#/components/schemas/UnixTimestampString'
+              networkHashRate:
+                $ref: '#/components/schemas/FloatString'
+    IntegerMin0String:
+      type: string
+      pattern: '[0-9]+'
+      description: An integer greater than 0 represented as a string.
+    Result.stats.dailyblkcount:
+      type: object
+      properties:
+        result:
+          type: array
+          items:
+            type: object
+            properties:
+              UTCDate:
+                $ref: '#/components/schemas/DateYYYYMMDD'
+              unixTimeStamp:
+                $ref: '#/components/schemas/UnixTimestampString'
+              blockCount:
+                $ref: '#/components/schemas/IntegerMin0'
+              blockRewards_Eth:
+                $ref: '#/components/schemas/FloatString'
     Result.stats.dailyblockrewards:
       type: object
       properties:
@@ -1307,6 +1218,95 @@ components:
               unixTimeStamp:
                 $ref: '#/components/schemas/UnixTimestampString'
               blockRewards_Eth:
+                $ref: '#/components/schemas/FloatString'
+    Result.stats.ethdailymarketcap:
+      type: object
+      properties:
+        result:
+          type: array
+          items:
+            type: object
+            properties:
+              UTCDate:
+                $ref: '#/components/schemas/DateYYYYMMDD'
+              unixTimeStamp:
+                $ref: '#/components/schemas/UnixTimestampString'
+              supply:
+                $ref: '#/components/schemas/FloatString'
+              marketCap:
+                $ref: '#/components/schemas/FloatString'
+              price:
+                $ref: '#/components/schemas/FloatString'
+    Result.stats.dailyavggaslimit:
+      type: object
+      properties:
+        result:
+          type: array
+          items:
+            type: object
+            properties:
+              UTCDate:
+                $ref: '#/components/schemas/DateYYYYMMDD'
+              unixTimeStamp:
+                $ref: '#/components/schemas/UnixTimestampString'
+              gasLimit:
+                $ref: '#/components/schemas/IntegerMin0String'
+    Result.stats.dailygasused:
+      type: object
+      properties:
+        result:
+          type: array
+          items:
+            type: object
+            properties:
+              UTCDate:
+                $ref: '#/components/schemas/DateYYYYMMDD'
+              unixTimeStamp:
+                $ref: '#/components/schemas/UnixTimestampString'
+              gasUsed:
+                $ref: '#/components/schemas/IntegerMin0String'
+    Result.stats.tokensupplyhistory:
+      type: object
+      properties:
+        result:
+          $ref: '#/components/schemas/IntegerMin0String'
+    Result.stats.dailyavgnetdifficulty:
+      type: object
+      properties:
+        result:
+          type: array
+          items:
+            type: object
+            properties:
+              UTCDate:
+                $ref: '#/components/schemas/DateYYYYMMDD'
+              unixTimeStamp:
+                $ref: '#/components/schemas/UnixTimestampString'
+              networkDifficulty:
+                $ref: '#/components/schemas/FloatWithCommasString'
+    UnixTimestampString:
+      type: string
+      description: A Unix timestamp representing the number of seconds since January 1, 1970, expressed as a string.
+      pattern: ^[0-9]+$
+      example: '1623338323'
+    Result.account.tokenbalancehistory:
+      type: object
+      properties:
+        result:
+          $ref: '#/components/schemas/IntegerMin0String'
+    Result.stats.dailyavgblocktime:
+      type: object
+      properties:
+        result:
+          type: array
+          items:
+            type: object
+            properties:
+              UTCDate:
+                $ref: '#/components/schemas/DateYYYYMMDD'
+              unixTimeStamp:
+                $ref: '#/components/schemas/UnixTimestampString'
+              blockTime_sec:
                 $ref: '#/components/schemas/FloatString'
   securitySchemes:
     apiKeyAuth:

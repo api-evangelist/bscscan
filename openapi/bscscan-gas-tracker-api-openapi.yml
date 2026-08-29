@@ -1,4 +1,4 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
   title: BscScan Accounts Gas Tracker API
   version: 1.0.0
@@ -242,6 +242,47 @@ paths:
                   avgGasPrice_Wei: '18834674068'
 components:
   schemas:
+    ResponseOK:
+      type: object
+      properties:
+        status:
+          type: string
+          enum:
+          - '1'
+        message:
+          type: string
+          enum:
+          - OK
+        result:
+          description: call result
+      required:
+      - status
+      - message
+      - result
+    DateYYYYMMDD:
+      type: string
+      format: date
+      description: A date in the YYYY-MM-DD format
+      example: '2019-02-01'
+    PageSort:
+      type: string
+      enum:
+      - asc
+      - desc
+    Result.stats.dailyavggaslimit:
+      type: object
+      properties:
+        result:
+          type: array
+          items:
+            type: object
+            properties:
+              UTCDate:
+                $ref: '#/components/schemas/DateYYYYMMDD'
+              unixTimeStamp:
+                $ref: '#/components/schemas/UnixTimestampString'
+              gasLimit:
+                $ref: '#/components/schemas/IntegerMin0String'
     Result.stats.dailygasused:
       type: object
       properties:
@@ -275,60 +316,6 @@ components:
       - status
       - message
       - result
-    FloatCsvString:
-      type: string
-      description: A comma-separated list of float values, represented as a string.
-      pattern: ^(\d+(\.\d+)?)(,\d+(\.\d+)?)*$
-    DateYYYYMMDD:
-      type: string
-      format: date
-      description: A date in the YYYY-MM-DD format
-      example: '2019-02-01'
-    Result.stats.dailyavggaslimit:
-      type: object
-      properties:
-        result:
-          type: array
-          items:
-            type: object
-            properties:
-              UTCDate:
-                $ref: '#/components/schemas/DateYYYYMMDD'
-              unixTimeStamp:
-                $ref: '#/components/schemas/UnixTimestampString'
-              gasLimit:
-                $ref: '#/components/schemas/IntegerMin0String'
-    Result.gastracker.gasestimate:
-      type: object
-      properties:
-        result:
-          $ref: '#/components/schemas/IntegerMin0String'
-    IntegerMin0String:
-      type: string
-      pattern: '[0-9]+'
-      description: An integer greater than 0 represented as a string.
-    PageSort:
-      type: string
-      enum:
-      - asc
-      - desc
-    ResponseOK:
-      type: object
-      properties:
-        status:
-          type: string
-          enum:
-          - '1'
-        message:
-          type: string
-          enum:
-          - OK
-        result:
-          description: call result
-      required:
-      - status
-      - message
-      - result
     FloatString:
       type: string
       pattern: ^\d+(\.\d+)?$
@@ -351,11 +338,18 @@ components:
                 $ref: '#/components/schemas/IntegerMin0String'
               avgGasPrice_Wei:
                 $ref: '#/components/schemas/IntegerMin0String'
-    UnixTimestampString:
+    IntegerMin0String:
       type: string
-      description: A Unix timestamp representing the number of seconds since January 1, 1970, expressed as a string.
-      pattern: ^[0-9]+$
-      example: '1623338323'
+      pattern: '[0-9]+'
+      description: An integer greater than 0 represented as a string.
+    Result.gastracker.gasestimate:
+      type: object
+      properties:
+        result:
+          $ref: '#/components/schemas/IntegerMin0String'
+    IntegerMin1:
+      type: integer
+      minimum: 1
     Result.gastracker.gasoracle:
       type: object
       properties:
@@ -374,9 +368,15 @@ components:
               $ref: '#/components/schemas/FloatString'
             gasUsedRatio:
               $ref: '#/components/schemas/FloatCsvString'
-    IntegerMin1:
-      type: integer
-      minimum: 1
+    FloatCsvString:
+      type: string
+      description: A comma-separated list of float values, represented as a string.
+      pattern: ^(\d+(\.\d+)?)(,\d+(\.\d+)?)*$
+    UnixTimestampString:
+      type: string
+      description: A Unix timestamp representing the number of seconds since January 1, 1970, expressed as a string.
+      pattern: ^[0-9]+$
+      example: '1623338323'
   securitySchemes:
     apiKeyAuth:
       type: apiKey
