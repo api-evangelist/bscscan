@@ -28,12 +28,12 @@ accessModel:
 image: https://bscscan.com/images/svg/brands/bscscan-logo-circle.svg
 tags:
   - Blockchain
-  - Block Explorer
+  - block-explorer
   - BNB Smart Chain
   - BSC
   - BEP-20
   - Transaction
-  - Smart Contracts
+  - smart-contracts
   - DeFi
   - EVM
 tags_raw:
