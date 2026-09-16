@@ -1,5 +1,8 @@
 name: BscScan
-description: BscScan is the leading block explorer and analytics platform for BNB Smart Chain (BSC), providing a REST API for querying transactions, token transfers, smart contract ABIs, gas prices, BEP-20 token information, and on-chain statistics. API subscriptions are now unified under the Etherscan V2 platform, enabling access to 60+ EVM chains via a single API key using the chainid parameter (BSC chainid=56).
+description: BscScan is the leading block explorer and analytics platform for BNB Smart Chain (BSC), providing
+  a REST API for querying transactions, token transfers, smart contract ABIs, gas prices, BEP-20 token
+  information, and on-chain statistics. API subscriptions are now unified under the Etherscan V2 platform,
+  enabling access to 60+ EVM chains via a single API key using the chainid parameter (BSC chainid=56).
 deliveryModel:
   model: saas
   open_source: false
@@ -27,27 +30,27 @@ accessModel:
   method: derived
 image: https://bscscan.com/images/svg/brands/bscscan-logo-circle.svg
 tags:
-  - Blockchain
-  - Block Explorer
-  - BNB Smart Chain
-  - BSC
-  - BEP-20
-  - Transaction
-  - Smart Contracts
-  - DeFi
-  - EVM
+- Blockchain
+- Block Explorer
+- BNB Smart Chain
+- BSC
+- BEP-20
+- Transaction
+- Smart Contracts
+- DeFi
+- EVM
 tags_raw:
-  - blockchain
-  - block-explorer
-  - BNB Smart Chain
-  - BSC
-  - BEP-20
-  - transactions
-  - smart-contracts
-  - DeFi
-  - EVM
-created: "2026-06-13"
-modified: "2026-06-13"
+- blockchain
+- block-explorer
+- BNB Smart Chain
+- BSC
+- BEP-20
+- transactions
+- smart-contracts
+- DeFi
+- EVM
+created: '2026-06-13'
+modified: '2026-09-16'
 url: https://raw.githubusercontent.com/api-evangelist/bscscan/refs/heads/main/apis.yml
 specificationVersion: '0.23'
 apis:
@@ -68,11 +71,9 @@ apis:
   - type: Plans
     url: https://raw.githubusercontent.com/api-evangelist/bscscan/refs/heads/main/plans/plans.yml
   - type: RateLimits
-    url: >-
-      https://raw.githubusercontent.com/api-evangelist/bscscan/refs/heads/main/rate-limits/rate-limits.yml
+    url: https://raw.githubusercontent.com/api-evangelist/bscscan/refs/heads/main/rate-limits/rate-limits.yml
   - type: FinOps
-    url: >-
-      https://raw.githubusercontent.com/api-evangelist/bscscan/refs/heads/main/finops/finops.yml
+    url: https://raw.githubusercontent.com/api-evangelist/bscscan/refs/heads/main/finops/finops.yml
   - type: Signup
     url: https://bscscan.com/register
   - type: Authentication
@@ -96,11 +97,9 @@ apis:
   - type: Plans
     url: https://raw.githubusercontent.com/api-evangelist/bscscan/refs/heads/main/plans/plans.yml
   - type: RateLimits
-    url: >-
-      https://raw.githubusercontent.com/api-evangelist/bscscan/refs/heads/main/rate-limits/rate-limits.yml
+    url: https://raw.githubusercontent.com/api-evangelist/bscscan/refs/heads/main/rate-limits/rate-limits.yml
   - type: FinOps
-    url: >-
-      https://raw.githubusercontent.com/api-evangelist/bscscan/refs/heads/main/finops/finops.yml
+    url: https://raw.githubusercontent.com/api-evangelist/bscscan/refs/heads/main/finops/finops.yml
   - type: Signup
     url: https://bscscan.com/register
   - type: Authentication
@@ -124,11 +123,9 @@ apis:
   - type: Plans
     url: https://raw.githubusercontent.com/api-evangelist/bscscan/refs/heads/main/plans/plans.yml
   - type: RateLimits
-    url: >-
-      https://raw.githubusercontent.com/api-evangelist/bscscan/refs/heads/main/rate-limits/rate-limits.yml
+    url: https://raw.githubusercontent.com/api-evangelist/bscscan/refs/heads/main/rate-limits/rate-limits.yml
   - type: FinOps
-    url: >-
-      https://raw.githubusercontent.com/api-evangelist/bscscan/refs/heads/main/finops/finops.yml
+    url: https://raw.githubusercontent.com/api-evangelist/bscscan/refs/heads/main/finops/finops.yml
   - type: Signup
     url: https://bscscan.com/register
   - type: Authentication
@@ -152,11 +149,9 @@ apis:
   - type: Plans
     url: https://raw.githubusercontent.com/api-evangelist/bscscan/refs/heads/main/plans/plans.yml
   - type: RateLimits
-    url: >-
-      https://raw.githubusercontent.com/api-evangelist/bscscan/refs/heads/main/rate-limits/rate-limits.yml
+    url: https://raw.githubusercontent.com/api-evangelist/bscscan/refs/heads/main/rate-limits/rate-limits.yml
   - type: FinOps
-    url: >-
-      https://raw.githubusercontent.com/api-evangelist/bscscan/refs/heads/main/finops/finops.yml
+    url: https://raw.githubusercontent.com/api-evangelist/bscscan/refs/heads/main/finops/finops.yml
   - type: Signup
     url: https://bscscan.com/register
   - type: Authentication
@@ -180,11 +175,9 @@ apis:
   - type: Plans
     url: https://raw.githubusercontent.com/api-evangelist/bscscan/refs/heads/main/plans/plans.yml
   - type: RateLimits
-    url: >-
-      https://raw.githubusercontent.com/api-evangelist/bscscan/refs/heads/main/rate-limits/rate-limits.yml
+    url: https://raw.githubusercontent.com/api-evangelist/bscscan/refs/heads/main/rate-limits/rate-limits.yml
   - type: FinOps
-    url: >-
-      https://raw.githubusercontent.com/api-evangelist/bscscan/refs/heads/main/finops/finops.yml
+    url: https://raw.githubusercontent.com/api-evangelist/bscscan/refs/heads/main/finops/finops.yml
   - type: Signup
     url: https://bscscan.com/register
   - type: Authentication
@@ -208,11 +201,9 @@ apis:
   - type: Plans
     url: https://raw.githubusercontent.com/api-evangelist/bscscan/refs/heads/main/plans/plans.yml
   - type: RateLimits
-    url: >-
-      https://raw.githubusercontent.com/api-evangelist/bscscan/refs/heads/main/rate-limits/rate-limits.yml
+    url: https://raw.githubusercontent.com/api-evangelist/bscscan/refs/heads/main/rate-limits/rate-limits.yml
   - type: FinOps
-    url: >-
-      https://raw.githubusercontent.com/api-evangelist/bscscan/refs/heads/main/finops/finops.yml
+    url: https://raw.githubusercontent.com/api-evangelist/bscscan/refs/heads/main/finops/finops.yml
   - type: Signup
     url: https://bscscan.com/register
   - type: Authentication
@@ -236,11 +227,9 @@ apis:
   - type: Plans
     url: https://raw.githubusercontent.com/api-evangelist/bscscan/refs/heads/main/plans/plans.yml
   - type: RateLimits
-    url: >-
-      https://raw.githubusercontent.com/api-evangelist/bscscan/refs/heads/main/rate-limits/rate-limits.yml
+    url: https://raw.githubusercontent.com/api-evangelist/bscscan/refs/heads/main/rate-limits/rate-limits.yml
   - type: FinOps
-    url: >-
-      https://raw.githubusercontent.com/api-evangelist/bscscan/refs/heads/main/finops/finops.yml
+    url: https://raw.githubusercontent.com/api-evangelist/bscscan/refs/heads/main/finops/finops.yml
   - type: Signup
     url: https://bscscan.com/register
   - type: Authentication
@@ -264,11 +253,9 @@ apis:
   - type: Plans
     url: https://raw.githubusercontent.com/api-evangelist/bscscan/refs/heads/main/plans/plans.yml
   - type: RateLimits
-    url: >-
-      https://raw.githubusercontent.com/api-evangelist/bscscan/refs/heads/main/rate-limits/rate-limits.yml
+    url: https://raw.githubusercontent.com/api-evangelist/bscscan/refs/heads/main/rate-limits/rate-limits.yml
   - type: FinOps
-    url: >-
-      https://raw.githubusercontent.com/api-evangelist/bscscan/refs/heads/main/finops/finops.yml
+    url: https://raw.githubusercontent.com/api-evangelist/bscscan/refs/heads/main/finops/finops.yml
   - type: Signup
     url: https://bscscan.com/register
   - type: Authentication
@@ -292,11 +279,9 @@ apis:
   - type: Plans
     url: https://raw.githubusercontent.com/api-evangelist/bscscan/refs/heads/main/plans/plans.yml
   - type: RateLimits
-    url: >-
-      https://raw.githubusercontent.com/api-evangelist/bscscan/refs/heads/main/rate-limits/rate-limits.yml
+    url: https://raw.githubusercontent.com/api-evangelist/bscscan/refs/heads/main/rate-limits/rate-limits.yml
   - type: FinOps
-    url: >-
-      https://raw.githubusercontent.com/api-evangelist/bscscan/refs/heads/main/finops/finops.yml
+    url: https://raw.githubusercontent.com/api-evangelist/bscscan/refs/heads/main/finops/finops.yml
   - type: Signup
     url: https://bscscan.com/register
   - type: Authentication
@@ -322,11 +307,9 @@ apis:
   - type: Plans
     url: https://raw.githubusercontent.com/api-evangelist/bscscan/refs/heads/main/plans/plans.yml
   - type: RateLimits
-    url: >-
-      https://raw.githubusercontent.com/api-evangelist/bscscan/refs/heads/main/rate-limits/rate-limits.yml
+    url: https://raw.githubusercontent.com/api-evangelist/bscscan/refs/heads/main/rate-limits/rate-limits.yml
   - type: FinOps
-    url: >-
-      https://raw.githubusercontent.com/api-evangelist/bscscan/refs/heads/main/finops/finops.yml
+    url: https://raw.githubusercontent.com/api-evangelist/bscscan/refs/heads/main/finops/finops.yml
   - type: Signup
     url: https://bscscan.com/register
   - type: Authentication
@@ -336,10 +319,12 @@ apis:
   - type: PrivacyPolicy
     url: https://bscscan.com/privacyPolicy
 maintainers:
-  - FN: API Evangelist
-    url: https://apievangelist.com
-    email: kin@apievangelist.com
+- FN: API Evangelist
+  url: https://apievangelist.com
+  email: kin@apievangelist.com
 common:
+- type: Website
+  url: https://bscscan.com
 - type: AgenticAccess
   url: agentic-access/bscscan-agentic-access.yml
 - type: VulnerabilityDisclosure
