@@ -1,20 +1,11 @@
 {
   "provider": "bscscan",
   "sources": [
-    "bscscan-accounts-api-openapi.yml",
-    "bscscan-api-pro-endpoints-api-openapi.yml",
-    "bscscan-blocks-api-openapi.yml",
-    "bscscan-contracts-api-openapi.yml",
-    "bscscan-gas-tracker-api-openapi.yml",
-    "bscscan-geth-parity-proxy-api-openapi.yml",
-    "bscscan-logs-api-openapi.yml",
-    "bscscan-stats-api-openapi.yml",
-    "bscscan-tokens-api-openapi.yml",
-    "bscscan-transactions-api-openapi.yml"
+    "_original/openapi.yml"
   ],
   "outputs": [
-    "bscscan-accounts-api-openapi.yml",
     "bscscan-api-pro-endpoints-api-openapi.yml",
+    "bscscan-accounts-api-openapi.yml",
     "bscscan-blocks-api-openapi.yml",
     "bscscan-contracts-api-openapi.yml",
     "bscscan-gas-tracker-api-openapi.yml",
@@ -28,17 +19,20 @@
   "errors": [],
   "warnings": [],
   "notes": [
-    "bscscan-accounts-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
-    "bscscan-api-pro-endpoints-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
-    "bscscan-blocks-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
-    "bscscan-contracts-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
-    "bscscan-gas-tracker-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
-    "bscscan-geth-parity-proxy-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
-    "bscscan-logs-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
-    "bscscan-stats-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
-    "bscscan-tokens-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
-    "bscscan-transactions-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
     "apis.yml register: already-registered"
   ],
-  "skipped": []
+  "skipped": [
+    "bscscan-accounts-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "bscscan-api-pro-endpoints-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "bscscan-blocks-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "bscscan-contracts-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "bscscan-gas-tracker-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "bscscan-geth-parity-proxy-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "bscscan-logs-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "bscscan-stats-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "bscscan-tokens-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "bscscan-transactions-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }

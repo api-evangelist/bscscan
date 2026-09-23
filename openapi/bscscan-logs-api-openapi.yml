@@ -1,6 +1,6 @@
 openapi: 3.2.0
 info:
-  title: BscScan Accounts Logs API
+  title: BscScan Logs API
   version: 1.0.0
   description: BscScan is the leading block explorer and analytics platform for BNB Smart Chain (BSC), providing a REST API for querying transactions, token transfers, smart contract ABIs, gas prices, BEP-20 token information, and on-chain statistics. API subscriptions are unified under the Etherscan V2 platform, enabling access to 60+ EVM chains via a single API key using the chainid parameter (BSC chainid=56).
   license:
@@ -283,23 +283,16 @@ paths:
                   transactionIndex: '0x92'
 components:
   schemas:
-    ResponseOK:
+    ResultArrayOfObjects:
       type: object
       properties:
-        status:
-          type: string
-          enum:
-          - '1'
-        message:
-          type: string
-          enum:
-          - OK
         result:
-          description: call result
-      required:
-      - status
-      - message
-      - result
+          $ref: '#/components/schemas/ArrayOfObjects'
+    ArrayOfObjects:
+      type: array
+      items:
+        type: object
+        additionalProperties: true
     ResponseNOTOK:
       type: object
       properties:
@@ -319,23 +312,38 @@ components:
       - status
       - message
       - result
-    IntegerMin1:
-      type: integer
-      minimum: 1
-    ArrayOfObjects:
-      type: array
-      items:
-        type: object
-        additionalProperties: true
-    ResultArrayOfObjects:
-      type: object
-      properties:
-        result:
-          $ref: '#/components/schemas/ArrayOfObjects'
+    TopicOperator:
+      type: string
+      enum:
+      - and
+      - or
     AddressHash:
       type: string
       pattern: 0x[A-Fa-f0-9]{40}
       example: '0x01234567890abcdef01234567890abcdef012345'
+    IntegerMin0:
+      type: integer
+      minimum: 0
+    ResponseOK:
+      type: object
+      properties:
+        status:
+          type: string
+          enum:
+          - '1'
+        message:
+          type: string
+          enum:
+          - OK
+        result:
+          description: call result
+      required:
+      - status
+      - message
+      - result
+    IntegerMin1:
+      type: integer
+      minimum: 1
     Topic:
       type: string
       enum:
@@ -343,14 +351,6 @@ components:
       - topic1
       - topic2
       - topic3
-    TopicOperator:
-      type: string
-      enum:
-      - and
-      - or
-    IntegerMin0:
-      type: integer
-      minimum: 0
     IntegerMin1Max1000:
       type: integer
       format: int32

@@ -1,6 +1,6 @@
 openapi: 3.2.0
 info:
-  title: BscScan Accounts Contracts API
+  title: BscScan Contracts API
   version: 1.0.0
   description: BscScan is the leading block explorer and analytics platform for BNB Smart Chain (BSC), providing a REST API for querying transactions, token transfers, smart contract ABIs, gas prices, BEP-20 token information, and on-chain statistics. API subscriptions are unified under the Etherscan V2 platform, enabling access to 60+ EVM chains via a single API key using the chainid parameter (BSC chainid=56).
   license:
@@ -204,23 +204,6 @@ paths:
                 result: Pass - Verified
 components:
   schemas:
-    ResponseOK:
-      type: object
-      properties:
-        status:
-          type: string
-          enum:
-          - '1'
-        message:
-          type: string
-          enum:
-          - OK
-        result:
-          description: call result
-      required:
-      - status
-      - message
-      - result
     ChainId:
       type: integer
       summary: the chain to submit verification, such as 1 for mainnet
@@ -356,10 +339,16 @@ components:
         | Testnet BlastScan           | 23888    |
 
         '
-    GUID:
-      type: string
-      pattern: '[a-z0-9]{50}'
-      example: x3ryqcqr1zdknhfhkimqmiabcdfxncqc6nrvp3pgrcpfsqedqi
+    ResultArrayOfObjects:
+      type: object
+      properties:
+        result:
+          $ref: '#/components/schemas/ArrayOfObjects'
+    ArrayOfObjects:
+      type: array
+      items:
+        type: object
+        additionalProperties: true
     ResponseNOTOK:
       type: object
       properties:
@@ -379,42 +368,10 @@ components:
       - status
       - message
       - result
-    Result.contract.checkverifystatus:
-      type: object
-      properties:
-        result:
-          type: string
-          const: Pass - Verified
-    Result.contract.getabi:
-      type: object
-      properties:
-        result:
-          type: string
-    ArrayOfObjects:
-      type: array
-      items:
-        type: object
-        additionalProperties: true
-    ResultArrayOfObjects:
-      type: object
-      properties:
-        result:
-          $ref: '#/components/schemas/ArrayOfObjects'
-    AddressHash:
+    TxHash:
       type: string
-      pattern: 0x[A-Fa-f0-9]{40}
-      example: '0x01234567890abcdef01234567890abcdef012345'
-    CodeFormat:
-      type: string
-      description: single file -- use `solidity-single-file`; JSON file ( recommended ) -- use `solidity-standard-json-input`
-      enum:
-      - solidity-single-file
-      - solidity-standard-json-input
-    Result.contract.verifysourcecode:
-      type: object
-      properties:
-        result:
-          $ref: '#/components/schemas/GUID'
+      pattern: 0x[A-Fa-f0-9]{64}
+      example: '0x01234567890abcdef01234567890abcdef01234567890abcdef01234567890ab'
     Result.contract.getcontractcreation:
       type: object
       properties:
@@ -429,6 +386,38 @@ components:
                 $ref: '#/components/schemas/AddressHash'
               txHash:
                 $ref: '#/components/schemas/TxHash'
+    AddressHash:
+      type: string
+      pattern: 0x[A-Fa-f0-9]{40}
+      example: '0x01234567890abcdef01234567890abcdef012345'
+    ResponseOK:
+      type: object
+      properties:
+        status:
+          type: string
+          enum:
+          - '1'
+        message:
+          type: string
+          enum:
+          - OK
+        result:
+          description: call result
+      required:
+      - status
+      - message
+      - result
+    Result.contract.getabi:
+      type: object
+      properties:
+        result:
+          type: string
+    Result.contract.checkverifystatus:
+      type: object
+      properties:
+        result:
+          type: string
+          const: Pass - Verified
     Post.contract.verifysourcecode:
       type: object
       properties:
@@ -457,10 +446,21 @@ components:
       - contractaddress
       - contractname
       - compilerversion
-    TxHash:
+    CodeFormat:
       type: string
-      pattern: 0x[A-Fa-f0-9]{64}
-      example: '0x01234567890abcdef01234567890abcdef01234567890abcdef01234567890ab'
+      description: single file -- use `solidity-single-file`; JSON file ( recommended ) -- use `solidity-standard-json-input`
+      enum:
+      - solidity-single-file
+      - solidity-standard-json-input
+    Result.contract.verifysourcecode:
+      type: object
+      properties:
+        result:
+          $ref: '#/components/schemas/GUID'
+    GUID:
+      type: string
+      pattern: '[a-z0-9]{50}'
+      example: x3ryqcqr1zdknhfhkimqmiabcdfxncqc6nrvp3pgrcpfsqedqi
   securitySchemes:
     apiKeyAuth:
       type: apiKey
