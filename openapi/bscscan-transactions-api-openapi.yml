@@ -83,6 +83,13 @@ paths:
                   status: '1'
 components:
   schemas:
+    Result.transaction.gettxreceiptstatus:
+      type: object
+      additionalProperties: true
+    TxHash:
+      type: string
+      pattern: 0x[A-Fa-f0-9]{64}
+      example: '0x01234567890abcdef01234567890abcdef01234567890abcdef01234567890ab'
     ResponseNOTOK:
       type: object
       properties:
@@ -102,10 +109,6 @@ components:
       - status
       - message
       - result
-    TxHash:
-      type: string
-      pattern: 0x[A-Fa-f0-9]{64}
-      example: '0x01234567890abcdef01234567890abcdef01234567890abcdef01234567890ab'
     ResponseOK:
       type: object
       properties:
@@ -124,9 +127,6 @@ components:
       - message
       - result
     Result.transaction.getstatus:
-      type: object
-      additionalProperties: true
-    Result.transaction.gettxreceiptstatus:
       type: object
       additionalProperties: true
   securitySchemes:

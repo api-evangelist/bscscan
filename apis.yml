@@ -333,3 +333,5 @@ common:
   url: security/bscscan-domain-security.yml
 - type: Authentication
   url: authentication/bscscan-authentication.yml
+x-parent: etherscan
+x-relationship: product

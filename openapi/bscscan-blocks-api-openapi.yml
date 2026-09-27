@@ -396,9 +396,83 @@ components:
                 $ref: '#/components/schemas/UnixTimestampString'
               blockTime_sec:
                 $ref: '#/components/schemas/FloatString'
-    Result.block.getblockreward:
+    Result.stats.dailyavgblocksize:
       type: object
-      additionalProperties: true
+      properties:
+        result:
+          type: array
+          items:
+            type: object
+            properties:
+              UTCDate:
+                $ref: '#/components/schemas/DateYYYYMMDD'
+              unixTimeStamp:
+                $ref: '#/components/schemas/UnixTimestampString'
+              blockSize_bytes:
+                $ref: '#/components/schemas/IntegerMin0'
+    Result.stats.dailyuncleblkcount:
+      type: object
+      properties:
+        result:
+          type: array
+          items:
+            type: object
+            properties:
+              UTCDate:
+                $ref: '#/components/schemas/DateYYYYMMDD'
+              unixTimeStamp:
+                $ref: '#/components/schemas/UnixTimestampString'
+              uncleBlockCount:
+                $ref: '#/components/schemas/IntegerMin0'
+              uncleBlockRewards_Eth:
+                $ref: '#/components/schemas/FloatString'
+    Result.block.getblockcountdown:
+      type: object
+      properties:
+        result:
+          type: object
+          properties:
+            CurrentBlock:
+              $ref: '#/components/schemas/IntegerMin0String'
+            CountdownBlock:
+              $ref: '#/components/schemas/IntegerMin0String'
+            RemainingBlock:
+              $ref: '#/components/schemas/IntegerMin0String'
+            EstimateTimeInSec:
+              $ref: '#/components/schemas/FloatString'
+    Result.block.getblocknobytime:
+      type: object
+      properties:
+        result:
+          $ref: '#/components/schemas/IntegerMin0String'
+    UnixTimestampString:
+      type: string
+      description: A Unix timestamp representing the number of seconds since January 1, 1970, expressed as a string.
+      pattern: ^[0-9]+$
+      example: '1623338323'
+    DateYYYYMMDD:
+      type: string
+      format: date
+      description: A date in the YYYY-MM-DD format
+      example: '2019-02-01'
+    Result.stats.dailyblockrewards:
+      type: object
+      properties:
+        result:
+          type: array
+          items:
+            type: object
+            properties:
+              UTCDate:
+                $ref: '#/components/schemas/DateYYYYMMDD'
+              unixTimeStamp:
+                $ref: '#/components/schemas/UnixTimestampString'
+              blockRewards_Eth:
+                $ref: '#/components/schemas/FloatString'
+    FloatString:
+      type: string
+      pattern: ^\d+(\.\d+)?$
+      description: A float represented as a string.
     ResponseNOTOK:
       type: object
       properties:
@@ -434,47 +508,21 @@ components:
                 $ref: '#/components/schemas/IntegerMin0'
               blockRewards_Eth:
                 $ref: '#/components/schemas/FloatString'
+    IntegerMin0:
+      type: integer
+      minimum: 0
     IntegerMin0String:
       type: string
       pattern: '[0-9]+'
       description: An integer greater than 0 represented as a string.
-    UnixTimestamp:
-      type: integer
-      format: int64
-      description: A Unix timestamp representing the number of seconds since January 1, 1970
-      example: 1623338323
-      minimum: 0
-    FloatString:
-      type: string
-      pattern: ^\d+(\.\d+)?$
-      description: A float represented as a string.
-    Result.stats.dailyavgblocksize:
-      type: object
-      properties:
-        result:
-          type: array
-          items:
-            type: object
-            properties:
-              UTCDate:
-                $ref: '#/components/schemas/DateYYYYMMDD'
-              unixTimeStamp:
-                $ref: '#/components/schemas/UnixTimestampString'
-              blockSize_bytes:
-                $ref: '#/components/schemas/IntegerMin0'
     PageSort:
       type: string
       enum:
       - asc
       - desc
-    IntegerMin0:
-      type: integer
-      minimum: 0
-    BlockClosest:
-      type: string
-      enum:
-      - before
-      - after
+    Result.block.getblockreward:
+      type: object
+      additionalProperties: true
     ResponseOK:
       type: object
       properties:
@@ -492,65 +540,17 @@ components:
       - status
       - message
       - result
-    DateYYYYMMDD:
+    BlockClosest:
       type: string
-      format: date
-      description: A date in the YYYY-MM-DD format
-      example: '2019-02-01'
-    UnixTimestampString:
-      type: string
-      description: A Unix timestamp representing the number of seconds since January 1, 1970, expressed as a string.
-      pattern: ^[0-9]+$
-      example: '1623338323'
-    Result.block.getblocknobytime:
-      type: object
-      properties:
-        result:
-          $ref: '#/components/schemas/IntegerMin0String'
-    Result.block.getblockcountdown:
-      type: object
-      properties:
-        result:
-          type: object
-          properties:
-            CurrentBlock:
-              $ref: '#/components/schemas/IntegerMin0String'
-            CountdownBlock:
-              $ref: '#/components/schemas/IntegerMin0String'
-            RemainingBlock:
-              $ref: '#/components/schemas/IntegerMin0String'
-            EstimateTimeInSec:
-              $ref: '#/components/schemas/FloatString'
-    Result.stats.dailyuncleblkcount:
-      type: object
-      properties:
-        result:
-          type: array
-          items:
-            type: object
-            properties:
-              UTCDate:
-                $ref: '#/components/schemas/DateYYYYMMDD'
-              unixTimeStamp:
-                $ref: '#/components/schemas/UnixTimestampString'
-              uncleBlockCount:
-                $ref: '#/components/schemas/IntegerMin0'
-              uncleBlockRewards_Eth:
-                $ref: '#/components/schemas/FloatString'
-    Result.stats.dailyblockrewards:
-      type: object
-      properties:
-        result:
-          type: array
-          items:
-            type: object
-            properties:
-              UTCDate:
-                $ref: '#/components/schemas/DateYYYYMMDD'
-              unixTimeStamp:
-                $ref: '#/components/schemas/UnixTimestampString'
-              blockRewards_Eth:
-                $ref: '#/components/schemas/FloatString'
+      enum:
+      - before
+      - after
+    UnixTimestamp:
+      type: integer
+      format: int64
+      description: A Unix timestamp representing the number of seconds since January 1, 1970
+      example: 1623338323
+      minimum: 0
   securitySchemes:
     apiKeyAuth:
       type: apiKey
