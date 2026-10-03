@@ -283,42 +283,40 @@ paths:
                   transactionIndex: '0x92'
 components:
   schemas:
-    ResultArrayOfObjects:
-      type: object
-      properties:
-        result:
-          $ref: '#/components/schemas/ArrayOfObjects'
-    IntegerMin1:
-      type: integer
-      minimum: 1
     ArrayOfObjects:
       type: array
       items:
         type: object
         additionalProperties: true
-    ResponseNOTOK:
-      type: object
-      properties:
-        status:
-          type: string
-          enum:
-          - '0'
-        message:
-          type: string
-          pattern: ^NOTOK(-.*)?$
-          examples:
-          - NOTOK
-          - NOTOK-Missing/Invalid API Key, rate limit of 1/5sec applied
-        result:
-          type: string
-      required:
-      - status
-      - message
-      - result
     AddressHash:
       type: string
       pattern: 0x[A-Fa-f0-9]{40}
       example: '0x01234567890abcdef01234567890abcdef012345'
+    TopicOperator:
+      type: string
+      enum:
+      - and
+      - or
+    Topic:
+      type: string
+      enum:
+      - topic0
+      - topic1
+      - topic2
+      - topic3
+    IntegerMin1:
+      type: integer
+      minimum: 1
+    IntegerMin1Max1000:
+      type: integer
+      format: int32
+      minimum: 1
+      maximum: 1000
+    ResultArrayOfObjects:
+      type: object
+      properties:
+        result:
+          $ref: '#/components/schemas/ArrayOfObjects'
     IntegerMin0:
       type: integer
       minimum: 0
@@ -339,23 +337,25 @@ components:
       - status
       - message
       - result
-    IntegerMin1Max1000:
-      type: integer
-      format: int32
-      minimum: 1
-      maximum: 1000
-    TopicOperator:
-      type: string
-      enum:
-      - and
-      - or
-    Topic:
-      type: string
-      enum:
-      - topic0
-      - topic1
-      - topic2
-      - topic3
+    ResponseNOTOK:
+      type: object
+      properties:
+        status:
+          type: string
+          enum:
+          - '0'
+        message:
+          type: string
+          pattern: ^NOTOK(-.*)?$
+          examples:
+          - NOTOK
+          - NOTOK-Missing/Invalid API Key, rate limit of 1/5sec applied
+        result:
+          type: string
+      required:
+      - status
+      - message
+      - result
   securitySchemes:
     apiKeyAuth:
       type: apiKey

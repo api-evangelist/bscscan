@@ -83,6 +83,9 @@ paths:
                   status: '1'
 components:
   schemas:
+    Result.transaction.getstatus:
+      type: object
+      additionalProperties: true
     Result.transaction.gettxreceiptstatus:
       type: object
       additionalProperties: true
@@ -90,6 +93,23 @@ components:
       type: string
       pattern: 0x[A-Fa-f0-9]{64}
       example: '0x01234567890abcdef01234567890abcdef01234567890abcdef01234567890ab'
+    ResponseOK:
+      type: object
+      properties:
+        status:
+          type: string
+          enum:
+          - '1'
+        message:
+          type: string
+          enum:
+          - OK
+        result:
+          description: call result
+      required:
+      - status
+      - message
+      - result
     ResponseNOTOK:
       type: object
       properties:
@@ -109,26 +129,6 @@ components:
       - status
       - message
       - result
-    ResponseOK:
-      type: object
-      properties:
-        status:
-          type: string
-          enum:
-          - '1'
-        message:
-          type: string
-          enum:
-          - OK
-        result:
-          description: call result
-      required:
-      - status
-      - message
-      - result
-    Result.transaction.getstatus:
-      type: object
-      additionalProperties: true
   securitySchemes:
     apiKeyAuth:
       type: apiKey
