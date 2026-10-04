@@ -926,34 +926,24 @@ paths:
                 result: '610538078574759898951277'
 components:
   schemas:
-    IntegerMin0String:
+    AddressHash:
       type: string
-      pattern: '[0-9]+'
-      description: An integer greater than 0 represented as a string.
-    PageSort:
-      type: string
-      enum:
-      - asc
-      - desc
+      pattern: 0x[A-Fa-f0-9]{40}
+      example: '0x01234567890abcdef01234567890abcdef012345'
     ArrayOfObjects:
       type: array
       items:
         type: object
         additionalProperties: true
-    AddressHash:
+    BlockTag:
       type: string
-      pattern: 0x[A-Fa-f0-9]{40}
-      example: '0x01234567890abcdef01234567890abcdef012345'
-    Result.account.balancehistory:
-      type: object
-      properties:
-        result:
-          $ref: '#/components/schemas/IntegerMin0String'
-    Result.account.balance:
-      type: object
-      properties:
-        result:
-          $ref: '#/components/schemas/IntegerMin0String'
+      enum:
+      - earliest
+      - latest
+      - pending
+    IntegerMin1:
+      type: integer
+      minimum: 1
     Result.account.balancemulti:
       type: object
       properties:
@@ -966,29 +956,21 @@ components:
                 $ref: '#/components/schemas/AddressHash'
               balance:
                 $ref: '#/components/schemas/IntegerMin0String'
-    BlockTag:
-      type: string
-      enum:
-      - earliest
-      - latest
-      - pending
-    BlockType:
-      type: string
-      enum:
-      - blocks
-      - uncles
-    IntegerMin1:
-      type: integer
-      minimum: 1
     ResultArrayOfObjects:
       type: object
       properties:
         result:
           $ref: '#/components/schemas/ArrayOfObjects'
-    TxHash:
+    PageSort:
       type: string
-      pattern: 0x[A-Fa-f0-9]{64}
-      example: '0x01234567890abcdef01234567890abcdef01234567890abcdef01234567890ab'
+      enum:
+      - asc
+      - desc
+    Result.account.balance:
+      type: object
+      properties:
+        result:
+          $ref: '#/components/schemas/IntegerMin0String'
     IntegerMin0:
       type: integer
       minimum: 0
@@ -1009,6 +991,24 @@ components:
       - status
       - message
       - result
+    Result.account.balancehistory:
+      type: object
+      properties:
+        result:
+          $ref: '#/components/schemas/IntegerMin0String'
+    BlockType:
+      type: string
+      enum:
+      - blocks
+      - uncles
+    IntegerMin0String:
+      type: string
+      pattern: '[0-9]+'
+      description: An integer greater than 0 represented as a string.
+    TxHash:
+      type: string
+      pattern: 0x[A-Fa-f0-9]{64}
+      example: '0x01234567890abcdef01234567890abcdef01234567890abcdef01234567890ab'
     ResponseNOTOK:
       type: object
       properties:
