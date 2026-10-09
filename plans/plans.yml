@@ -1,3 +1,7 @@
+# Provenance stamped 2026-10-07 (roadmap#943): written by an API Evangelist sweep (undated — the file carries no date and git cannot supply one), not
+# harvested from the provider. `method: generated` so the economics campaign may replace it with a
+# dated, verbatim transcription; every figure below is unverified until it does.
+method: generated
 name: BscScan API Plans
 description: BscScan API plans are managed through the Etherscan V2 unified platform, providing access to BNB Smart Chain (chainid=56) alongside 60+ EVM chains under a single API key. Plans scale from a free tier with basic rate limits up to enterprise with dedicated infrastructure.
 provider: BscScan (via Etherscan V2)
@@ -105,3 +109,54 @@ notes:
   - Payments are non-refundable
   - API Pro accounts activate within 24 hours after payment
   - Auto-renewal enabled by default; cancel before billing date to stop renewal
+x-canonical:
+  generated: '2026-10-08'
+  vocabulary: all/0-working/economics/plans-canonical.yml
+  models:
+  - free
+  - negotiated
+  - subscription
+  units: []
+  plans:
+  - name: Free
+    access: other
+    model: free
+    model_how: derived
+    units: []
+    periods: []
+  - name: Lite
+    access: other
+    model: subscription
+    model_how: derived
+    units: []
+    periods: []
+  - name: Standard
+    access: other
+    model: subscription
+    model_how: derived
+    units: []
+    periods: []
+  - name: Advanced
+    access: other
+    model: subscription
+    model_how: derived
+    units: []
+    periods: []
+  - name: Professional
+    access: other
+    model: subscription
+    model_how: derived
+    units: []
+    periods: []
+  - name: Pro Plus
+    access: other
+    model: subscription
+    model_how: derived
+    units: []
+    periods: []
+  - name: Enterprise
+    access: other
+    model: negotiated
+    model_how: derived
+    units: []
+    periods: []

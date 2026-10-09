@@ -1,3 +1,7 @@
+# Provenance stamped 2026-10-07 (roadmap#943): written by an API Evangelist sweep (undated — the file carries no date and git cannot supply one), not
+# harvested from the provider. `method: generated` so the economics campaign may replace it with a
+# dated, verbatim transcription; every figure below is unverified until it does.
+method: generated
 name: BscScan API Rate Limits
 description: BscScan API rate limits are enforced per API key and vary by subscription plan. Limits apply to calls per second and total daily calls. Free API keys support up to 5 calls per second. Pro plans unlock higher throughput up to 30 calls per second with up to 1.5 million daily calls.
 url: https://info.bscscan.com/apis/
