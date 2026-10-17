@@ -926,89 +926,23 @@ paths:
                 result: '610538078574759898951277'
 components:
   schemas:
-    AddressHash:
-      type: string
-      pattern: 0x[A-Fa-f0-9]{40}
-      example: '0x01234567890abcdef01234567890abcdef012345'
-    ArrayOfObjects:
-      type: array
-      items:
-        type: object
-        additionalProperties: true
-    BlockTag:
-      type: string
-      enum:
-      - earliest
-      - latest
-      - pending
-    IntegerMin1:
+    IntegerMin0:
       type: integer
-      minimum: 1
-    Result.account.balancemulti:
-      type: object
-      properties:
-        result:
-          type: array
-          items:
-            type: object
-            properties:
-              account:
-                $ref: '#/components/schemas/AddressHash'
-              balance:
-                $ref: '#/components/schemas/IntegerMin0String'
-    ResultArrayOfObjects:
-      type: object
-      properties:
-        result:
-          $ref: '#/components/schemas/ArrayOfObjects'
+      minimum: 0
+    TxHash:
+      type: string
+      pattern: 0x[A-Fa-f0-9]{64}
+      example: '0x01234567890abcdef01234567890abcdef01234567890abcdef01234567890ab'
     PageSort:
       type: string
       enum:
       - asc
       - desc
-    Result.account.balance:
-      type: object
-      properties:
-        result:
-          $ref: '#/components/schemas/IntegerMin0String'
-    IntegerMin0:
-      type: integer
-      minimum: 0
-    ResponseOK:
-      type: object
-      properties:
-        status:
-          type: string
-          enum:
-          - '1'
-        message:
-          type: string
-          enum:
-          - OK
-        result:
-          description: call result
-      required:
-      - status
-      - message
-      - result
     Result.account.balancehistory:
       type: object
       properties:
         result:
           $ref: '#/components/schemas/IntegerMin0String'
-    BlockType:
-      type: string
-      enum:
-      - blocks
-      - uncles
-    IntegerMin0String:
-      type: string
-      pattern: '[0-9]+'
-      description: An integer greater than 0 represented as a string.
-    TxHash:
-      type: string
-      pattern: 0x[A-Fa-f0-9]{64}
-      example: '0x01234567890abcdef01234567890abcdef01234567890abcdef01234567890ab'
     ResponseNOTOK:
       type: object
       properties:
@@ -1028,6 +962,72 @@ components:
       - status
       - message
       - result
+    IntegerMin1:
+      type: integer
+      minimum: 1
+    Result.account.balancemulti:
+      type: object
+      properties:
+        result:
+          type: array
+          items:
+            type: object
+            properties:
+              account:
+                $ref: '#/components/schemas/AddressHash'
+              balance:
+                $ref: '#/components/schemas/IntegerMin0String'
+    BlockType:
+      type: string
+      enum:
+      - blocks
+      - uncles
+    Result.account.balance:
+      type: object
+      properties:
+        result:
+          $ref: '#/components/schemas/IntegerMin0String'
+    ResponseOK:
+      type: object
+      properties:
+        status:
+          type: string
+          enum:
+          - '1'
+        message:
+          type: string
+          enum:
+          - OK
+        result:
+          description: call result
+      required:
+      - status
+      - message
+      - result
+    ArrayOfObjects:
+      type: array
+      items:
+        type: object
+        additionalProperties: true
+    IntegerMin0String:
+      type: string
+      pattern: '[0-9]+'
+      description: An integer greater than 0 represented as a string.
+    AddressHash:
+      type: string
+      pattern: 0x[A-Fa-f0-9]{40}
+      example: '0x01234567890abcdef01234567890abcdef012345'
+    BlockTag:
+      type: string
+      enum:
+      - earliest
+      - latest
+      - pending
+    ResultArrayOfObjects:
+      type: object
+      properties:
+        result:
+          $ref: '#/components/schemas/ArrayOfObjects'
   securitySchemes:
     apiKeyAuth:
       type: apiKey

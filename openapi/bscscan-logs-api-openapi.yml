@@ -283,11 +283,9 @@ paths:
                   transactionIndex: '0x92'
 components:
   schemas:
-    ArrayOfObjects:
-      type: array
-      items:
-        type: object
-        additionalProperties: true
+    IntegerMin0:
+      type: integer
+      minimum: 0
     ResponseNOTOK:
       type: object
       properties:
@@ -307,14 +305,19 @@ components:
       - status
       - message
       - result
+    IntegerMin1Max1000:
+      type: integer
+      format: int32
+      minimum: 1
+      maximum: 1000
     IntegerMin1:
       type: integer
       minimum: 1
-    ResultArrayOfObjects:
-      type: object
-      properties:
-        result:
-          $ref: '#/components/schemas/ArrayOfObjects'
+    TopicOperator:
+      type: string
+      enum:
+      - and
+      - or
     Topic:
       type: string
       enum:
@@ -339,23 +342,20 @@ components:
       - status
       - message
       - result
-    IntegerMin0:
-      type: integer
-      minimum: 0
-    IntegerMin1Max1000:
-      type: integer
-      format: int32
-      minimum: 1
-      maximum: 1000
-    TopicOperator:
-      type: string
-      enum:
-      - and
-      - or
+    ArrayOfObjects:
+      type: array
+      items:
+        type: object
+        additionalProperties: true
     AddressHash:
       type: string
       pattern: 0x[A-Fa-f0-9]{40}
       example: '0x01234567890abcdef01234567890abcdef012345'
+    ResultArrayOfObjects:
+      type: object
+      properties:
+        result:
+          $ref: '#/components/schemas/ArrayOfObjects'
   securitySchemes:
     apiKeyAuth:
       type: apiKey

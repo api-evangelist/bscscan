@@ -83,31 +83,11 @@ paths:
                   status: '1'
 components:
   schemas:
-    Result.transaction.getstatus:
-      type: object
-      additionalProperties: true
-    ResponseOK:
-      type: object
-      properties:
-        status:
-          type: string
-          enum:
-          - '1'
-        message:
-          type: string
-          enum:
-          - OK
-        result:
-          description: call result
-      required:
-      - status
-      - message
-      - result
     TxHash:
       type: string
       pattern: 0x[A-Fa-f0-9]{64}
       example: '0x01234567890abcdef01234567890abcdef01234567890abcdef01234567890ab'
-    Result.transaction.gettxreceiptstatus:
+    Result.transaction.getstatus:
       type: object
       additionalProperties: true
     ResponseNOTOK:
@@ -125,6 +105,26 @@ components:
           - NOTOK-Missing/Invalid API Key, rate limit of 1/5sec applied
         result:
           type: string
+      required:
+      - status
+      - message
+      - result
+    Result.transaction.gettxreceiptstatus:
+      type: object
+      additionalProperties: true
+    ResponseOK:
+      type: object
+      properties:
+        status:
+          type: string
+          enum:
+          - '1'
+        message:
+          type: string
+          enum:
+          - OK
+        result:
+          description: call result
       required:
       - status
       - message
