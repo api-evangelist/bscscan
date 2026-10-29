@@ -64,53 +64,162 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-BscScan is the leading block explorer and analytics platform for BNB Smart Chain (BSC). It provides a REST API for querying on-chain data including account balances, transactions, BEP-20 and BEP-721 token transfers, smart contract ABIs and source code, event logs, gas prices, block data, and network statistics.
+BscScan is the leading block explorer and analytics platform for BNB Smart Chain (BSC), providing a REST API for querying transactions, token transfers, smart contract ABIs, gas prices, BEP-20 token information, and on-chain statistics. API subscriptions are now unified under the Etherscan V2 platform, enabling access to 60+ EVM chains via a single API key using the chainid parameter (BSC chainid=56).
 
-API subscriptions are now unified under the Etherscan V2 platform, granting access to 60+ EVM chains via a single API key. BNB Smart Chain is accessed using `chainid=56` in API requests.
+**Areas:** Blockchain · Block Explorer · BNB Smart Chain · BSC · BEP-20 · Transaction · Smart Contracts · DeFi · EVM
 
-## Base URL
+## BscScan on APIs.io
 
-```
-https://api.bscscan.com/v2/api
-```
+Everything profiled for BscScan is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/bscscan/](https://apis.io/providers/bscscan/)** — or go straight to one of the APIs or properties below.
 
-## Authentication
+### APIs (10)
 
-All requests require an API key. Create a free key at [bscscan.com/myapikey](https://bscscan.com/myapikey) after registering an account.
+- [BscScan Accounts API](https://apis.io/apis/bscscan/bscscan-accounts-api/) — The Accounts API from BscScan — 12 operation(s) for accounts.
+- [BscScan API PRO Endpoints API](https://apis.io/apis/bscscan/bscscan-api-pro-endpoints-api/) — The API PRO Endpoints API from BscScan — 20 operation(s) for api pro endpoints.
+- [BscScan Blocks API](https://apis.io/apis/bscscan/bscscan-blocks-api/) — The Blocks API from BscScan — 8 operation(s) for blocks.
+- [BscScan Contracts API](https://apis.io/apis/bscscan/bscscan-contracts-api/) — The Contracts API from BscScan — 5 operation(s) for contracts.
+- [BscScan Gas Tracker API](https://apis.io/apis/bscscan/bscscan-gas-tracker-api/) — The Gas Tracker API from BscScan — 5 operation(s) for gas tracker.
+- [BscScan Geth/Parity Proxy API](https://apis.io/apis/bscscan/bscscan-geth-parity-proxy-api/) — The Geth/Parity Proxy API from BscScan — 14 operation(s) for geth/parity proxy.
+- [BscScan Logs API](https://apis.io/apis/bscscan/bscscan-logs-api/) — The Logs API from BscScan — 3 operation(s) for logs.
+- [BscScan Stats API](https://apis.io/apis/bscscan/bscscan-stats-api/) — The Stats API from BscScan — 13 operation(s) for stats.
+- [BscScan Tokens API](https://apis.io/apis/bscscan/bscscan-tokens-api/) — The Tokens API from BscScan — 9 operation(s) for tokens.
+- [BscScan Transactions API](https://apis.io/apis/bscscan/bscscan-transactions-api/) — The Transactions API from BscScan — 2 operation(s) for transactions.
 
-```
-?apikey=YOUR_API_KEY&chainid=56
-```
+### Published properties
 
-## API Modules
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-| Module | Description |
-|--------|-------------|
-| Accounts | BNB balances, normal transactions, internal transactions, BEP-20 and BEP-721 token transfers, validated blocks |
-| Blocks | Block rewards, block number by timestamp, estimated block countdown |
-| Contracts | Contract ABI, verified source code retrieval |
-| Logs | Filtered event log queries across block ranges |
-| Proxy | JSON-RPC proxy for block number, block data, transactions, gas price, contract calls |
-| Stats | BNB last price, total BNB supply, validators list |
-| Tokens | Token supply, circulating supply, account token balances by contract address |
-| Transactions | Transaction receipt status verification |
+#### Agentic access (1)
 
-## Plans
+Which operations an agent can call, which act, and which need a human in the loop.
 
-| Plan | Price/month | Rate Limit | Daily Calls |
-|------|-------------|------------|-------------|
-| Free | $0 | 5 calls/sec | 100,000 |
-| Lite | $49 | 5 calls/sec | 100,000 |
-| Standard | $199 | 10 calls/sec | 200,000 |
-| Advanced | $299 | 20 calls/sec | 500,000 |
-| Professional | $399 | 30 calls/sec | 1,000,000 |
-| Pro Plus | $899 | 30 calls/sec | 1,500,000 |
-| Enterprise | Custom | Unmetered | Unmetered |
+- [Bscscan Agentic Access](https://apis.io/agentic-access/bscscan/bscscan-agentic-access/)
 
-## Links
+#### JSON Schema (3)
+
+The data models the API reads and writes.
+
+- [BscScan Account Balance Response](https://apis.io/schemas/bscscan/account-balance/)
+- [BscScan BEP-20 Token Transfer Event](https://apis.io/schemas/bscscan/token-transfer/)
+- [BscScan Transaction](https://apis.io/schemas/bscscan/transaction/)
+
+#### JSON-LD (1)
+
+Linked-data contexts for the provider's vocabulary.
+
+- [context Context](https://apis.io/jsonld/bscscan/context/)
+
+#### Examples (4)
+
+Example requests and responses.
+
+- [Account Balance](https://apis.io/examples/bscscan/account-balance/)
+- [Gas Oracle](https://apis.io/examples/bscscan/gas-oracle/)
+- [Token Transfer](https://apis.io/examples/bscscan/token-transfer/)
+- [Transaction List](https://apis.io/examples/bscscan/transaction-list/)
+
+#### Collections (10)
+
+Postman and Open Collection request collections.
+
+- [BscScan Accounts API](https://apis.io/collections/bscscan/open-bscscan-accounts-api/)
+- [BscScan Accounts API PRO Endpoints API](https://apis.io/collections/bscscan/open-bscscan-api-pro-endpoints-api/)
+- [BscScan Accounts Blocks API](https://apis.io/collections/bscscan/open-bscscan-blocks-api/)
+- [BscScan Accounts Contracts API](https://apis.io/collections/bscscan/open-bscscan-contracts-api/)
+- [BscScan Accounts Gas Tracker API](https://apis.io/collections/bscscan/open-bscscan-gas-tracker-api/)
+- [BscScan Accounts Geth/Parity Proxy API](https://apis.io/collections/bscscan/open-bscscan-geth-parity-proxy-api/)
+- [BscScan Accounts Logs API](https://apis.io/collections/bscscan/open-bscscan-logs-api/)
+- [BscScan Accounts Stats API](https://apis.io/collections/bscscan/open-bscscan-stats-api/)
+- [BscScan Accounts Tokens API](https://apis.io/collections/bscscan/open-bscscan-tokens-api/)
+- [BscScan Accounts Transactions API](https://apis.io/collections/bscscan/open-bscscan-transactions-api/)
+
+#### Governance rules (1)
+
+Spectral rulesets for the provider's contracts.
+
+- [BscScan — jsonschema rules](https://apis.io/rules/bscscan/bscscan-jsonschema-spectral-rules/)
+
+#### Security (3)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Bscscan Authentication](https://apis.io/security/bscscan/bscscan-authentication/)
+- [Bscscan Domain Security](https://apis.io/security/bscscan/bscscan-domain-security/)
+- [Bscscan Vulnerability Disclosure](https://apis.io/security/bscscan/bscscan-vulnerability-disclosure/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Plans](https://apis.io/plans/bscscan/plans/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Rate Limits](https://apis.io/rate-limits/bscscan/rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Finops](https://apis.io/finops/bscscan/finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://bscscan.com)
-- [API Documentation](https://info.bscscan.com/apis/)
-- [API Key Management](https://bscscan.com/myapikey)
-- [Pricing](https://etherscan.io/apis?id=56)
-- [Terms of Service](https://bscscan.com/terms)
+
+## API Evangelist rating
+
+**Kin Score 35.7** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 66.1 |
+| Contract quality | 54.4 |
+| Contract governance | 9.8 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 21.4 |
+| Access clarity | 42.1 |
+
+**Agent readiness 24.8** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | verified |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 30.4** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/bscscan/](https://apis.io/providers/bscscan/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for BscScan: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/bscscan/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
